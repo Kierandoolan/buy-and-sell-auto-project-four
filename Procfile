@@ -1,0 +1,1 @@
+web: gunicorn buy-and-sell-auto.wsgi
