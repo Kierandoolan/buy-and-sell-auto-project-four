@@ -1,1 +1,1 @@
-web: gunicorn buy-and-sell-auto.wsgi
+web: gunicorn buy_and_sell_auto.wsgi
