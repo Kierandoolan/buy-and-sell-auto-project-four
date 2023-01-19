@@ -8,7 +8,7 @@ from django_summernote.admin import SummernoteModelAdmin
 class CarAdAdmin(SummernoteModelAdmin):
 
     list_display = ('title', 'slug', 'author', 'created_on', 'year', 'nct', 'price')
-    list_filter = ('author', 'created_on') 
+    list_filter = ('author', 'created_on')
     summernote_fields = ('description',)
 
 
