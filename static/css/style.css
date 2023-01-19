@@ -20,7 +20,10 @@ body {
     color: #FBFAF5;
     opacity: .85;
     transition: opacity .2s ease-in-out;
+}
 
+.fa-bars{
+    color:#fff
 }
 
 .nav-link:hover {
