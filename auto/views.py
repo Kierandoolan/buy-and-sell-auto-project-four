@@ -9,6 +9,6 @@ class CarAdList(generic.ListView):
     on the index.html page
     """
     model = CarAd
-    queryset = CarAd.objects.filter(status=1).order_by("-created_on")
+    queryset = CarAd.objects.order_by("-created_on")
     template_name = "index.html"
     paginate_by = 6
