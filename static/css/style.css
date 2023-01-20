@@ -49,8 +49,15 @@ body {
     min-height: 300px;
 }
 
-.thin {
-    font-weight: 300;
+.hero-text {
+    color:white;
+    width: inherit;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    ;
+   
 }
 
 .light-bg {
