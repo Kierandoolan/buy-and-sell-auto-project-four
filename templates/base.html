@@ -62,12 +62,24 @@
                             Motors
                         </a>
                     </li>
-                    <li class="ms-2">
+                    <li class="ms-3">
                         <a href="#" class="nav-link menu-nav-link" aria-current="page"
                             aria-label="Show about Page">
                             Who Are We?
                         </a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link menu-nav-link" href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link menu-nav-link" href="{% url 'account_signup' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu-nav-link" href="{% url 'account_login' %}">Login</a>
+                    </li>
+                    {% endif %}
                 </ul>
         </div>
     </nav>
