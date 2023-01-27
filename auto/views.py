@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import CarAd
 from .forms import CommentForm
 
@@ -14,6 +15,7 @@ class CarAdList(generic.ListView):
     template_name = "index.html"
     paginate_by = 6
 
+
 class AdDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
@@ -23,8 +25,6 @@ class AdDetail(View):
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
-
-       
 
         return render(
             request,
@@ -37,7 +37,6 @@ class AdDetail(View):
                 "comment_form": CommentForm(),
             },
         )
-
 
     def post(self, request, slug, *args, **kwargs):
         queryset = CarAd.objects
@@ -68,3 +67,16 @@ class AdDetail(View):
                 "comment_form": CommentForm(),
             },
         )
+
+
+class AdLike(View):
+
+    def post(self, request, slug):
+        queryset = CarAd.objects
+        post = get_object_or_404(queryset, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('ad_detail', args=[slug]))
