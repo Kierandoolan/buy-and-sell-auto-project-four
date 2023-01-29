@@ -1,28 +1,36 @@
 {% extends 'base.html' %} {% block content %}
 
 {% load crispy_forms_tags %}
-
-<div class="masthead">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
-                <h1 class="post-title">{{ post.title }}</h1>
-                <!-- Post author goes before the | the post's created date goes after -->
-                <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
-            </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- The featured image URL goes in the src attribute -->
-                <img src="{{ post.image.url }} " width="100%">
-            </div>
+<div class="container">
+    <div class="row g-0 masthead">
+        <div class="col-md-6 my-auto text-center">
+            <h1> {{ post.title }}</h1>
+            <p class="subtitle mb-3 mb-lg-0">by {{ post.author }} | <em>{{ post.created_on }}</em></p>
+        </div>
+        <div class="d-md-block col-lg-6">
+            <img class="card-img-top img-fit" src=" {{ post.image.url }}" alt="picture of car">
         </div>
     </div>
 </div>
+
 
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
+
+                <div class="container mt-3">
+                    <h5>Key Info</h5>
+                    <hr class="red-left">
+                    <p>Year: {{ post.year }}</p>
+                    <p>NCT Expiry: {{ post.nct }}</p>
+                    <p>Phone Number: {{ post.number }}</p> 
+                    <br>
+                    <h5>Detailed Info</h5>
+                    <hr class="red-left">
+                    <p class="text-justify">{{ post.description | linebreaks }}</p>
+        
+                </div>
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text ">
@@ -53,16 +61,14 @@
                             <!-- Our total_comments variable goes before the closing strong tag -->
                             {{ total_comments }}</strong>
                         {% endwith %}
+                        
                     </div>
                 </div>
+                <hr>
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <hr>
-        </div>
-    </div>
+    
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Comments:</h3>
@@ -106,6 +112,7 @@
                 {% endif %}
             </div>
         </div>
+    
     </div>
 </div>
 

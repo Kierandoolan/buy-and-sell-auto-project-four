@@ -35,6 +35,11 @@ class CarAd(models.Model):
     def number_of_likes(self):
         return self.likes.count()
 
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = self.title.replace(' ', '-')
+        super().save(*args, **kwargs)
+
 
 class Comment(models.Model):
     post = models.ForeignKey(CarAd, on_delete=models.CASCADE,
