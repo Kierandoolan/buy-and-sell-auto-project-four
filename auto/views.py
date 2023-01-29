@@ -80,3 +80,10 @@ class AdLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('ad_detail', args=[slug]))
+
+
+def about(request):
+    """
+    Render about page on request
+    """
+    return render(request, 'about.html')
