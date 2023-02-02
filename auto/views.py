@@ -5,15 +5,22 @@ from .models import CarAd
 from .forms import CommentForm
 
 
+def Home(request):
+    """
+    Render about page on request
+    """
+    return render(request, 'index.html')
+
+
 class CarAdList(generic.ListView):
     """
-    Shows maximum of six Car Posts
-    on the index.html page
+    Shows maximum of 12 Car Posts
+    on the browse.html page
     """
     model = CarAd
     queryset = CarAd.objects.order_by("-created_on")
-    template_name = "index.html"
-    paginate_by = 6
+    template_name = "browse.html"
+    paginate_by = 12
 
 
 class AdDetail(View):
@@ -82,7 +89,7 @@ class AdLike(View):
         return HttpResponseRedirect(reverse('ad_detail', args=[slug]))
 
 
-def about(request):
+def About(request):
     """
     Render about page on request
     """
