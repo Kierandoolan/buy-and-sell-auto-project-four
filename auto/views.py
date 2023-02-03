@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import CarAd
@@ -46,16 +46,17 @@ def AddCar(request):
 
 
 class AdLike(View):
-
+    
     def post(self, request, slug):
-        queryset = CarAd.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
-        if post.likes.filter(id=request.user.id).exists():
-            post.likes.remove(request.user)
-        else:
-            post.likes.add(request.user)
+        
+        car = get_object_or_404(CarAd, slug=slug)
 
-        return HttpResponseRedirect(reverse('car_ad_detail', args=[slug]))
+        if car.likes.filter(id=request.user.id).exists():
+            car.likes.remove(request.user)
+        else:
+            car.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('Car_ad_detail', args=[slug]))
 
 
 def About(request):
