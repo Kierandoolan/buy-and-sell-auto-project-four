@@ -57,7 +57,7 @@
                         </a>
                     </li>
                     <li class="ms-3">
-                        <a href="{% url 'browse' %}" class="nav-link menu-nav-link" aria-current="page"
+                        <a href="{% url 'carlist' %}" class="nav-link menu-nav-link" aria-current="page"
                             aria-label="show motor for sell page">
                             Cars For Sale
                         </a>
@@ -69,6 +69,9 @@
                         </a>
                     </li>
                     {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link menu-nav-link" href="{% url 'add_car' %}">Add Your Car</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link menu-nav-link" href="{% url 'account_logout' %}">Logout</a>
                     </li>

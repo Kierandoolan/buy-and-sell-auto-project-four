@@ -4,9 +4,11 @@ from django.urls import path
 
 urlpatterns = [
     path('', views.Home, name='home'),
-    path('<slug:slug>/', views.AdDetail.as_view(), name='ad_detail'),
-    path('like/<slug:slug>', views.AdLike.as_view(), name='post_like'),
+    path('carlist', views.CarAdList.as_view(), name='carlist'),
+    path('add_car/', views.AddCar, name='add_car'),
     path('about', views.About, name='about'),
-    path('browse', views.CarAdList.as_view(), name='browse'),
-
+    path('like/<slug:slug>', views.AdLike.as_view(), name='post_like'),
+    path('<slug:slug>/', views.CarAdDetail.as_view(), name='Car_ad_detail'),
+    
+    
 ]

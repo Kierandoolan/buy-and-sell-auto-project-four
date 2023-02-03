@@ -1,8 +1,8 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import CarAd
-from .forms import CommentForm
+from .forms import CommentForm, CarForm
 
 
 def Home(request):
@@ -15,18 +15,60 @@ def Home(request):
 class CarAdList(generic.ListView):
     """
     Shows maximum of 12 Car Posts
-    on the browse.html page
+    on the carlist.html page
     """
     model = CarAd
     queryset = CarAd.objects.order_by("-created_on")
-    template_name = "browse.html"
+    template_name = "carlist.html"
     paginate_by = 12
 
 
-class AdDetail(View):
+def AddCar(request):
+    """
+    renders add car page
+    """
+    car_form = CarForm(request.POST or None, request.FILES or None)
+    context = {
+        'car_form': car_form,
+    }
+
+    if request.method == "POST":
+        car_form = CarForm(request.POST, request.FILES)
+        if car_form.is_valid():
+            car_form = car_form.save(commit=False)
+            car_form.author = request.user
+            car_form.status = 1
+            car_form.save()
+            return redirect('home')
+    else:
+        car_form = CarForm()
+        return render(request, "add_car.html", context)
+
+
+class AdLike(View):
+
+    def post(self, request, slug):
+        queryset = CarAd.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('car_ad_detail', args=[slug]))
+
+
+def About(request):
+    """
+    Render about page on request
+    """
+    return render(request, 'about.html')
+
+
+class CarAdDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
-        queryset = CarAd.objects
+        queryset = CarAd.objects.all()
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
         liked = False
@@ -35,18 +77,19 @@ class AdDetail(View):
 
         return render(
             request,
-            "ad_detail.html",
+            "car_ad_detail.html",
             {
                 "post": post,
                 "comments": comments,
                 "commented":  False,
                 "liked": liked,
                 "comment_form": CommentForm(),
+                "car_form": CarForm(),
             },
         )
 
     def post(self, request, slug, *args, **kwargs):
-        queryset = CarAd.objects
+        queryset = CarAd.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
         liked = False
@@ -65,7 +108,7 @@ class AdDetail(View):
 
         return render(
             request,
-            "ad_detail.html",
+            "car_ad_detail.html",
             {
                 "post": post,
                 "comments": comments,
@@ -74,23 +117,3 @@ class AdDetail(View):
                 "comment_form": CommentForm(),
             },
         )
-
-
-class AdLike(View):
-
-    def post(self, request, slug):
-        queryset = CarAd.objects
-        post = get_object_or_404(queryset, slug=slug)
-        if post.likes.filter(id=request.user.id).exists():
-            post.likes.remove(request.user)
-        else:
-            post.likes.add(request.user)
-
-        return HttpResponseRedirect(reverse('ad_detail', args=[slug]))
-
-
-def About(request):
-    """
-    Render about page on request
-    """
-    return render(request, 'about.html')

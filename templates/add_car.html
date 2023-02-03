@@ -3,23 +3,48 @@
 {% load crispy_forms_tags %}
 
 
-<div class="container">
-    <h1 class="page-title">Add Car To Sell</h1>
-    <hr class="home-break">
-    <br>
-    <div class="row justify-content-center ">
-        {% if user.is_authenticated %}
-        {% load cloudinary %}
-        <div class="col-11 col-md-8 col-lg-6 mt-3">
-            <!--  Add Car Form -->
-            <form method="post" enctype="multipart/form-data">
-                {{ form | crispy }}
-                {% csrf_token %}
-                <button type="submit" class="btn btn-outline-dark">Submit</button>
-                <a class="btn btn btn-outline-dark m-2" href="{%  url 'browse' %}">Cancel</a>
+{% if user.is_authenticated %}
+<div class="container text-dark">
+    <div class="row">
+        <div class="col mt-3 mb-5">
+            <div class="yellow-box rounded box-shadow">
+                <h2 class="text-center lettuce-text text-shadow">Add your Car</h2>
+            </div>
+            <form method="post" style="margin-top: 1.3em;" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col">
+                        {% csrf_token %}
+                        <div class="row">
+                            {{ car_form.title | as_crispy_field | safe }}
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                {{ car_form.image|as_crispy_field | safe }}
+                            </div>
+                            <div class="col-6">
+                                {{ car_form.year|as_crispy_field | safe }}
+                            </div>
+                            <div class="col-6">
+                                {{ car_form.number|as_crispy_field | safe }}
+                            </div>
+                            <div class="col-6">
+                                {{ car_form.nct|as_crispy_field | safe }}
+                            </div>
+                            <div class="col-6">
+                                {{ car_form.price|as_crispy_field | safe }}
+                            </div>
+                            <div class="col-6">
+                                {{ car_form.description|as_crispy_field | safe }}
+                            </div>
+                        </div>
+    
+                    
+                        <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    </div>
+                </div>
             </form>
         </div>
-        {% endif %}
     </div>
 </div>
+{% endif %}
 {% endblock content %}

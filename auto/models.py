@@ -14,7 +14,8 @@ class CarAd(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="auto_CarAds")
+        User, on_delete=models.CASCADE, related_name="auto_CarAd")
+    status = models.IntegerField(choices=STATUS, default=1)
     updated_on = models.DateTimeField(auto_now=True)
     created_on = models.DateTimeField(auto_now=True)
     description = models.TextField(max_length=500)
@@ -54,6 +55,4 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
-
-
 
