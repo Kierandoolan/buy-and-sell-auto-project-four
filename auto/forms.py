@@ -1,6 +1,7 @@
 from .models import Comment, CarAd
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+
+
 
 
 class CommentForm(forms.ModelForm):
@@ -12,7 +13,7 @@ class CommentForm(forms.ModelForm):
 class CarForm(forms.ModelForm):
     
     """
-    Form to add a recipe
+    Form to add a Car
      """
     class Meta:
         model = CarAd
@@ -25,6 +26,7 @@ class CarForm(forms.ModelForm):
             'price',
             'description',
         ]
+
 
     def __init__(self, *args, **kwargs):
         super(CarForm, self).__init__(*args, **kwargs)

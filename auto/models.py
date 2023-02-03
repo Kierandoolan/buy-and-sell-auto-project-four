@@ -6,7 +6,6 @@ from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
-
 class CarAd(models.Model):
     """
     A model to post an ad for a car
@@ -26,6 +25,7 @@ class CarAd(models.Model):
     nct = models.DateField(auto_now=False)
     likes = models.ManyToManyField(
         User, related_name='autopost_like', blank=True)
+
 
     class Meta:
         ordering = ["-created_on"]
