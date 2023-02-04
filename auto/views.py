@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import CarAd
 from .forms import CommentForm, CarForm
+from django.conf import settings
 
 
 def Home(request):
@@ -24,25 +25,20 @@ class CarAdList(generic.ListView):
 
 
 def AddCar(request):
-    """
-    renders add car page
-    """
-    car_form = CarForm(request.POST or None, request.FILES or None)
+    
+    form = CarForm(request.POST, request.FILES)
     context = {
-        'car_form': car_form,
-    }
-
-    if request.method == "POST":
-        car_form = CarForm(request.POST, request.FILES)
-        if car_form.is_valid():
-            car_form = car_form.save(commit=False)
-            car_form.author = request.user
-            car_form.status = 1
-            car_form.save()
-            return redirect('home')
+            'form': form,
+            }
+    if form.is_valid():
+        new_form = form.save(commit=False)
+        new_form.author = request.user
+        new_form.save()
+        
+        return redirect('home')
     else:
-        car_form = CarForm()
-        return render(request, "add_car.html", context)
+        form = CarForm()
+        return render(request, 'add_car.html', context)
 
 
 def DeleteCar(request, slug):

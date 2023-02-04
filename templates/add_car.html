@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+
 {% load crispy_forms_tags %}
 
 
@@ -12,34 +13,18 @@
             </div>
             <form method="post" style="margin-top: 1.3em;" enctype="multipart/form-data">
                 <div class="row">
-                    <div class="col">
+                    <form method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
-                        <div class="row">
-                            {{ car_form.title | as_crispy_field | safe }}
-                        </div>
-                        <div class="row">
-                            <div class="col-6">
-                                {{ car_form.image|as_crispy_field | safe }}
-                            </div>
-                            <div class="col-6">
-                                {{ car_form.year|as_crispy_field | safe }}
-                            </div>
-                            <div class="col-6">
-                                {{ car_form.number|as_crispy_field | safe }}
-                            </div>
-                            <div class="col-6">
-                                {{ car_form.nct|as_crispy_field | safe }}
-                            </div>
-                            <div class="col-6">
-                                {{ car_form.price|as_crispy_field | safe }}
-                            </div>
-                            <div class="col-6">
-                                {{ car_form.description|as_crispy_field | safe }}
-                            </div>
-                        </div>
+                        {{ form | crispy }}
+                        
+                        <br>
+                        <input type="submit" class="btn btn-outline-success button ">
+                    </form>
+                </div>
+                 
     
                     
-                        <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                        
                     </div>
                 </div>
             </form>
