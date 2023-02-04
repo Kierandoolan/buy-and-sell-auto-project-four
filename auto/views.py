@@ -45,6 +45,15 @@ def AddCar(request):
         return render(request, "add_car.html", context)
 
 
+def DeleteCar(request, slug):
+    """
+    Delete Car Ciew
+    """
+    car = CarAd.objects.get(slug=slug)
+    car.delete()
+    return redirect('home')
+
+
 class AdLike(View):
     
     def post(self, request, slug):
