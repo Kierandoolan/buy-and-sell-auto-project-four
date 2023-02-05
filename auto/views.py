@@ -41,6 +41,21 @@ def AddCar(request):
         return render(request, 'add_car.html', context)
 
 
+def EditCar(request, slug):
+    """
+    Edit Car
+    """
+    item = get_object_or_404(CarAd, slug=slug)
+    if request.method == 'POST':
+        form = CarForm(request.POST, request.FILES, instance=item)
+        form.save()
+        return redirect('home')
+    form = CarForm(instance=item)
+    context = {
+        'form': form,
+    }
+    return render(request, 'edit_car.html', context)
+
 def DeleteCar(request, slug):
     """
     Delete Car Ciew

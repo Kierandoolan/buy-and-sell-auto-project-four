@@ -38,8 +38,10 @@
                         </p>
                     <div class="col mt-2 mb-3">
                         {% if user.id == post.author.id %}
-                        <a href="{% url 'delete_car' post.slug %}" class="confirm-delete delete"><button class="btn btn-danger btn-md mx-4"
+                        <a href="{% url 'delete_car' post.slug %}"> <button class="btn btn-danger btn-md mx-4"
                         value="{{ car.slug }}" type="button">Delete</button></a>
+                        <a href="{% url 'edit_car' post.slug %}"> <button class="btn btn-success btn-md mx-4"
+                            value="{{ car.slug }}" type="button">Edit</button></a>
                         {% endif %}
                     </div>
                     <div class="row">
