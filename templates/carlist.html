@@ -4,7 +4,8 @@
 
 <div class="container-fluid">
     <div class="row">
-        <!-- CarEntries Column -->
+
+        <!-- Car Entries Column -->
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for ad in object_list %}
@@ -12,6 +13,7 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
+                                <div class="image-container">
                                     <img src=" {{ ad.image.url }}" class="img-fluid main-image rounded image-hover" alt="Image of a car">
                                     <p class="author">Author: {{ ad.author }}</p>
                                 </div>

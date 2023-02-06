@@ -71,8 +71,14 @@
 }
 
 .card {
+    padding:3px;
+    border:2px;
+    border-style: groove;
+    background-color: none;
+}
+.card-body {
     border: none;
-    background-color: transparent;
+    background-color:transparent;
 }
 
 .image-container {
@@ -106,10 +112,7 @@
     margin-bottom: 0;
 
 }
-.border-card {
-    border-style:outset;
 
-}
 
 .masthead {
     background-color: slategray;
