@@ -9,14 +9,12 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for ad in object_list %}
-                <div class="col-md-4">
+                <div class="col-md-4 ">
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                <div class="image-container">
-                                    <img src=" {{ ad.image.url }}" class="img-fluid main-image rounded image-hover" alt="Image of a car">
+                                    <img src=" {{ ad.image.url }}" class="img-fluid main-image rounded image-hover img-height" alt="Image of a car">
                                     <p class="author">Author: {{ ad.author }}</p>
-                                </div>
                             </div>
                             <a href="{% url 'Car_ad_detail' ad.slug %}" class="post-link">
                                 <h2 class="card-title">{{ ad.title }}</h2>

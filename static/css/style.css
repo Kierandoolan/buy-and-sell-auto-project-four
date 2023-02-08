@@ -20,6 +20,7 @@
     transition: opacity .2s ease-in-out;
 }
 
+
 .fa-bars{
     color:#fff
 }
@@ -54,8 +55,7 @@
     top: 50%;
     left: 30%;
     transform: translate(-50%, -50%);
-    ;
-   
+  
 }
 
 .light-bg {
@@ -76,9 +76,10 @@
     border-style: groove;
     background-color: none;
 }
-.card-body {
-    border: none;
-    background-color:transparent;
+    
+.img-height {
+    min-height:300px;
+
 }
 
 .image-container {
@@ -194,4 +195,16 @@
     color: #E84610;
     background: transparent;
     border: none;
+}
+
+@media only screen and (max-width: 555px) {
+    .hero-text {
+        width:50%;
+    }
+}
+@media only screen and (min-width: 555px ) and (max-width: 855px) {
+    .hero-text{
+        width:50%;
+    }
+    
 }
