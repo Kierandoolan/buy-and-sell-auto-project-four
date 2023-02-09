@@ -25,7 +25,7 @@ Buy and Sell Auto is a website for Buying and Selling Cars. It is created using 
    * [Languages used](#languages-used)
    * [Libraries & Programs Used](#libraries-and-programs-used)
 
-- [Testing](#eat-me)
+- [Testing](#)
   
 - [Deployment](#deployment)
    * [Github pages](#github)
@@ -134,6 +134,8 @@ Buy and Sell Auto is a website for Buying and Selling Cars. It is created using 
 
 
 ## Testing 
+This Project was tested manually.
+
 
 
 ## Deployment

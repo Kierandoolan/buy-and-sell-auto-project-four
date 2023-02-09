@@ -27,17 +27,16 @@ class CarAdList(generic.ListView):
 def AddCar(request):
     
     form = CarForm(request.POST, request.FILES)
-    context = {
-            'form': form,
-            }
     if form.is_valid():
         new_form = form.save(commit=False)
         new_form.author = request.user
         new_form.save()
-        
         return redirect('home')
     else:
         form = CarForm()
+        context = {
+            'form': form,
+            }
         return render(request, 'add_car.html', context)
 
 
