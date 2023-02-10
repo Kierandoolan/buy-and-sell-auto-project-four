@@ -1,7 +1,8 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import CarAd
+from django.views.generic import UpdateView
+from .models import CarAd, Comment
 from .forms import CommentForm, CarForm
 from django.conf import settings
 
@@ -54,6 +55,7 @@ def EditCar(request, slug):
         'form': form,
     }
     return render(request, 'edit_car.html', context)
+
 
 def DeleteCar(request, slug):
     """
@@ -137,3 +139,17 @@ class CarAdDetail(View):
                 "comment_form": CommentForm(),
             },
         )
+
+
+class DeleteComment(UpdateView):
+    """     User Can Edit Comment """
+    model = Comment
+    form_class = CommentForm
+
+
+def delete_comment(request, comment_id):
+    """Deletes comment"""
+    comment = get_object_or_404(Comment, id=comment_id)
+    comment.delete()
+    return HttpResponseRedirect(reverse(
+        'Car_ad_detail', args=[comment.post.slug]))

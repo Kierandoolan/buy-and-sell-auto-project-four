@@ -36,13 +36,13 @@
                         <p class="card-text ">
                         {{ post.content | safe }}
                         </p>
-                    <div class="col mt-2 mb-3">
-                        {% if user.id == post.author.id %}
-                        <a href="{% url 'delete_car' post.slug %}"> <button class="btn btn-danger btn-md mx-4"
-                        value="{{ car.slug }}" type="button">Delete</button></a>
-                        <a href="{% url 'edit_car' post.slug %}"> <button class="btn btn-success btn-md mx-4"
-                            value="{{ car.slug }}" type="button">Edit</button></a>
-                        {% endif %}
+                        <div class="col mt-2 mb-3">
+                            {% if user.id == post.author.id %}
+                            <a href="{% url 'delete_car' post.slug %}"> <button class="btn btn-danger btn-md mx-4"
+                            value="{{ car.slug }}" type="button">Delete</button></a>
+                            <a href="{% url 'edit_car' post.slug %}"> <button class="btn btn-success btn-md mx-4"
+                                value="{{ car.slug }}" type="button">Edit</button></a>
+                            {% endif %}
                     </div>
                     <div class="row">
                         <div class="col-1">
@@ -95,13 +95,14 @@
                         <!-- The body of the comment goes before the | -->
                         {{ comment.body | linebreaks }}
                     </div>
-                    <!-- Our for loop ends here -->
+                    {% if user.is_authenticated and user.username == comment.name %}
+                    <a href="{% url 'delete_comment' comment.id %}" class="btn btn-danger btn-md mx-4">Delete Comment</a>
+                    {% endif %}
                     {% endfor %}
                 </div>
             </div>
             <div class="col-md-4 card mb-4  mt-3 ">
                 <div class="card-body">
-                    <!-- For later -->
                     {% if commented %}
                     <div class="alert alert-success" id="msg" role="alert">
                         Your comment is awaiting approval

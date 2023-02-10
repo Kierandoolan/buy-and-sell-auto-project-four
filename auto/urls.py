@@ -11,6 +11,7 @@ urlpatterns = [
     path('about', views.About, name='about'),
     path('like/<slug:slug>', views.AdLike.as_view(), name='post_like'),
     path('<slug:slug>/', views.CarAdDetail.as_view(), name='Car_ad_detail'),
-    
+    path('delete_comment/<int:comment_id>',
+         views.delete_comment, name='delete_comment'),
     
 ]
