@@ -42,6 +42,10 @@
     margin-bottom: 30px;
 }
 
+.fa-car {
+    color:#E84610;
+}
+
 .hero-image img {
     height: 600px;
     width: 100vw;
@@ -58,6 +62,13 @@
   
 }
 
+.welcome-text {
+    padding-bottom: 75px;
+}
+.welcome-hr{
+    margin-top: 25px;
+    margin-bottom:25px;
+}
 .light-bg {
     background-color: white;
 }
@@ -95,7 +106,7 @@
 }
 
 .author {
-    color: white;
+    color: black;
     margin: 4px;
     text-transform: uppercase;
 }
