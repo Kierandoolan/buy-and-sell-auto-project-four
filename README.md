@@ -38,9 +38,31 @@ Buy and Sell Auto is a website for Buying and Selling Cars. It is created using 
    * [Media](#media)
 
 ## User Experience (UX)
-
+A User of the Buy and Sell Auto Page would be someone who is looking to buy or sell there car or cars. It could also be for someone who has an interest in cars and are looking to browse.
 
 ## User Stories 
+#### EPIC | User Profile
+- As a Site User I can register an account so that I can add/edit/delete my car post and I can also comment or like other car posts that has been posted by another member of the site.
+- As a Site User, I can log in or log out of my account so that I can keep my account secure.
+- As a Site User I can see my login status so that I know if I'm logged in or out.
+
+#### EPIC | User Navigation
+- As a Site User I can see what the website is about and know if it is what i need.
+- As a Site User, I can easily navigate around the site and find what i need without any problems.
+- As a Site User, I can view a paginated list of cars posted and i can select any car to view.
+- As a Site User, I can click on a car post so that I can read the authors details, cars key info, description of car and view comments left by users.
+
+#### EPIC | User Management
+
+As a Site User, I can Delete my own Car Post.
+As a Site User, I can Edit my own Car Post so i dont need to start at the very beginner for changing details or errors. 
+
+#### EPIC | User Interaction
+As a Site User, I can Like another members post.
+As a Site User, I can comment on another members post and delete the post once site admin as approved it.
+
+#### EPIC | Site Administration
+- As a Site Administrator, I can create, read, update and delete posts and comments
 
 
 
@@ -58,6 +80,18 @@ Buy and Sell Auto is a website for Buying and Selling Cars. It is created using 
 - 
 
 ### Wireframes
+-   To View Home DeskTop click [here](docs/wireframes/home-desktop.png).
+-   To View Home Ipad click [here](docs/wireframes/home-ipad.png).
+-   To View Home Mobile click [here](docs/wireframes/home-mobile.png).
+-   To View Add Car DeskTop click [here](docs/wireframes/addcar-desktop.png).
+-   To View Add Car Ipad click [here](docs/wireframes/addcar-ipad.png).
+-   To View Browse Cars DeskTop click [here](docs/wireframes/browse-car-desktop.png).
+-   To View Browse Cars Mobile click [here](docs/wireframes/browse-cars-mobile.png).
+-   To View Browse Cars Tablet click [here](docs/wireframes/browse-cars-tablet.png).
+-   To View Car Detail DeskTop click [here](docs/wireframes/car-detail-desktop.png).
+-   To View Car Detail Tablet click [here](docs/wireframes/car-detail-tablet.png).
+-   To View Car Detail Mobile click [here](docs/wireframes/cardetail-mobile.png).
+
 
 ### Database Schema 
 
