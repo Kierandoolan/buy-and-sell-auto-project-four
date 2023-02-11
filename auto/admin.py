@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import CarAd, Comment
+from .models import CarAd, Comment, Contact
 from django_summernote.admin import SummernoteModelAdmin
 # Register your models here.
 
@@ -21,3 +21,5 @@ class CommentAdmin(admin.ModelAdmin):
 
     def approve_comments(self, request, queryset):
         queryset.update(approved=True)
+
+admin.site.register(Contact)

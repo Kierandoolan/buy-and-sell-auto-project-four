@@ -4,8 +4,9 @@ from django.http import HttpResponseRedirect
 from django.views.generic import UpdateView, TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import CarAd, Comment
-from .forms import CommentForm, CarForm
+from .forms import CommentForm, CarForm, ContactForm
 from django.conf import settings
+from django.http import HttpResponse
 
 
 def Home(request):
@@ -89,13 +90,6 @@ class AdLike(View):
         return HttpResponseRedirect(reverse('Car_ad_detail', args=[slug]))
 
 
-def About(request):
-    """
-    Render about page on request
-    """
-    return render(request, 'about.html')
-
-
 class CarAdDetail(View):
     """ 
     For Car Post Details
@@ -157,9 +151,21 @@ class DeleteComment(UpdateView):
     model = Comment
     form_class = CommentForm
 
+
 def delete_comment(request, comment_id):
     """Deletes comment"""
     comment = get_object_or_404(Comment, id=comment_id)
     comment.delete()
     return HttpResponseRedirect(reverse(
         'Car_ad_detail', args=[comment.post.slug]))
+
+
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'index.html')
+    form = ContactForm()
+    context = {'form': form}
+    return render(request, 'contact.html', context)

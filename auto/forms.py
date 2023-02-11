@@ -1,4 +1,4 @@
-from .models import Comment, CarAd
+from .models import Comment, CarAd, Contact
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 
@@ -86,3 +86,9 @@ class CarForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(CarForm, self).__init__(*args, **kwargs)
         self.fields['image'].label = ''
+
+
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = Contact
+        fields = '__all__'

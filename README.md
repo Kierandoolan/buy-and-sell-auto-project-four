@@ -213,6 +213,20 @@ This project was deployed using Github and Heroku.
 
 ## Credits
 
+### Content
+
+-   All content was written by the developer with the help of Code insitute Walkthroughs and the help of my collegues on slack and tutors. Big thank you to them!
+
+### Acknowledgements
+
+-   My Mentor for continuous helpful feedback.
+
+-   Tutor support at Code Institute for their support.
+
+-   The Teachers at Code Institude for helpful videos and walk through project
+
+-   My collegues on the slack app who helped me when i had any issues.
+
 ### Code
 
  -  
