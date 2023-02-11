@@ -4,13 +4,15 @@ from django.contrib.auth.forms import UserCreationForm
 
 
 class CommentForm(forms.ModelForm):
+    """
+    Form for User to add a comment
+    """
     class Meta:
         model = Comment
         fields = ('body',)
 
 
 class CarForm(forms.ModelForm):
-    
     """
     Form to add a Car
      """
@@ -20,7 +22,16 @@ class CarForm(forms.ModelForm):
                 'placeholder': 'Car Name'
                 }
             ),
-        label=''
+        label='Name of Car'
+    )
+
+    number = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                'placeholder': 'Phone Number'
+                }
+            ),
+        label='Phone Number'
     )
 
     price = forms.CharField(
@@ -29,7 +40,7 @@ class CarForm(forms.ModelForm):
                 'placeholder': 'Price of Car'
                 }
             ),
-        label='Price Of Car'
+        label='Price Of Car in Euros'
     )
 
     year = forms.DateField(
@@ -54,9 +65,10 @@ class CarForm(forms.ModelForm):
         widget=forms.ClearableFileInput(
             attrs={
                 'class': 'form-control',
+                'placeholder': 'Select Image of Car'
                 }
             ),
-        label=''
+        label='Image of Car'
     )
 
     class Meta:
@@ -70,8 +82,6 @@ class CarForm(forms.ModelForm):
             'price',
             'description',
         ]
-
-
 
     def __init__(self, *args, **kwargs):
         super(CarForm, self).__init__(*args, **kwargs)

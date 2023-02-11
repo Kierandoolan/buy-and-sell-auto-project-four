@@ -1,4 +1,16 @@
+* {
+    margin:0;
+    padding:0;
+    border:0;
+}
 
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&display=swap');
+
+
+body {
+font-family: 'Gentium Book Plus', sans-serif;
+    font-weight: 450;
+}
 
 /* Navigation */
 
@@ -22,11 +34,11 @@
 
 
 .fa-bars{
-    color:#fff
+    color:#FBFAF5;
 }
 
 .nav-link:hover {
-    color: red;
+    color: #FCA311;
     font-weight: bolder;
     text-decoration-line: underline;
 }
@@ -43,7 +55,7 @@
 }
 
 .fa-car {
-    color:#E84610;
+    color:#FCA311;
 }
 
 .hero-image img {
@@ -61,6 +73,7 @@
     transform: translate(-50%, -50%);
   
 }
+ /* Home page Details */
 
 .welcome-text {
     padding-bottom: 75px;
@@ -68,17 +81,18 @@
 .welcome-hr{
     margin-top: 25px;
     margin-bottom:25px;
+    color:#000000;
 }
 .light-bg {
     background-color: white;
 }
 
 .dark-bg {
-    background-color: black;
+    background-color: #000000;
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #E5E5E5;
 }
 
 .card {
@@ -87,7 +101,8 @@
     border-style: groove;
     background-color: none;
 }
-    
+
+
 .img-height {
     min-height:300px;
 
@@ -95,14 +110,6 @@
 
 .image-container {
     position: relative;
-}
-
-.image-flash {
-    position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #23BBBB;
 }
 
 .author {
@@ -115,19 +122,8 @@
     object-fit: cover;
 }
 
-.post-title {
-    margin-left: 5%;
-}
-
-.post-subtitle {
-    margin-left: 5%;
-    margin-bottom: 0;
-
-}
-
-
 .masthead {
-    background-color: slategray;
+    background-color: #415A77;
     color: #FBFAF5;
     width:fit-content;
 }
@@ -159,43 +155,37 @@
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
-}
-
-.post-title {
-    margin-top: 20%;
-    margin-left: 5%;
-}
-
-.post-subtitle {
-    margin-left: 5%;
-    color: lightgray;
+    color: #FCA311;
+    opacity: .85;
+    transition: opacity .2s ease-in-out;
 }
 
 .btn-signup {
-    background-color: #23BBBB;
+    background-color: #FCA311;
     color: #fff;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
     background-color: #fff;
-    color: #23BBBB;
+    color: #FCA311;
 }
 
 .link {
-    color: #23BBBB;
+    color: #FCA311;
     text-decoration: none;
 }
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: #FCA311;
     text-decoration: underline;
 }
 
+/* Like Feature */
+
 .btn-like {
-    color: #E84610;
+    color: #FCA311;
     border: none;
     background: transparent;
 }
@@ -203,10 +193,12 @@
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: #FCA311;
     background: transparent;
     border: none;
 }
+
+/* Media Queries */
 
 @media only screen and (max-width: 555px) {
     .hero-text {

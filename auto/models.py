@@ -6,6 +6,7 @@ from cloudinary.models import CloudinaryField
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 class CarAd(models.Model):
     """
     A model to post an ad for a car
@@ -26,7 +27,6 @@ class CarAd(models.Model):
     likes = models.ManyToManyField(
         User, related_name='autopost_like', blank=True)
 
-
     class Meta:
         ordering = ["-created_on"]
 
@@ -43,6 +43,9 @@ class CarAd(models.Model):
 
 
 class Comment(models.Model):
+    """
+    Modal to add comments
+    """
     post = models.ForeignKey(CarAd, on_delete=models.CASCADE,
                              related_name="comments")
     name = models.CharField(max_length=80)

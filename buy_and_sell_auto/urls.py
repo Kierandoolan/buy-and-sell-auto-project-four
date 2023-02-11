@@ -21,4 +21,5 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('', include('auto.urls'), name='auto-urls'),
     path('accounts/', include('allauth.urls')),
+    path('oauth/', include('social_django.urls', namespace='social')),
     ]

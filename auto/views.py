@@ -1,7 +1,8 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from django.views.generic import UpdateView
+from django.views.generic import UpdateView, TemplateView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import CarAd, Comment
 from .forms import CommentForm, CarForm
 from django.conf import settings
@@ -12,6 +13,10 @@ def Home(request):
     Render about page on request
     """
     return render(request, 'index.html')
+
+
+class HomeView(LoginRequiredMixin, TemplateView):
+    template_name = "home.html" 
 
 
 class CarAdList(generic.ListView):
@@ -26,7 +31,9 @@ class CarAdList(generic.ListView):
 
 
 def AddCar(request):
-    
+    """
+    Renders form to add a new car
+    """
     form = CarForm(request.POST, request.FILES)
     if form.is_valid():
         new_form = form.save(commit=False)
@@ -59,7 +66,7 @@ def EditCar(request, slug):
 
 def DeleteCar(request, slug):
     """
-    Delete Car Ciew
+    Delete Car Post
     """
     car = CarAd.objects.get(slug=slug)
     car.delete()
@@ -67,7 +74,9 @@ def DeleteCar(request, slug):
 
 
 class AdLike(View):
-    
+    """
+    User can add a like to car post
+    """
     def post(self, request, slug):
         
         car = get_object_or_404(CarAd, slug=slug)
@@ -88,7 +97,9 @@ def About(request):
 
 
 class CarAdDetail(View):
-
+    """ 
+    For Car Post Details
+    """
     def get(self, request, slug, *args, **kwargs):
         queryset = CarAd.objects.all()
         post = get_object_or_404(queryset, slug=slug)
@@ -142,10 +153,9 @@ class CarAdDetail(View):
 
 
 class DeleteComment(UpdateView):
-    """     User Can Edit Comment """
+    """User Can Edit Comment """
     model = Comment
     form_class = CommentForm
-
 
 def delete_comment(request, comment_id):
     """Deletes comment"""

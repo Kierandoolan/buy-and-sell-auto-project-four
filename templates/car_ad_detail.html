@@ -25,6 +25,7 @@
                         <p>Year: {{ post.year }}</p>
                         <p>NCT Expiry: {{ post.nct }}</p>
                         <p>Phone Number: {{ post.number }}</p> 
+                        <p>Price: €{{ post.price }}</p>
                         <br>
                         <h5>Detailed Info</h5>
                         <hr class="red-left">
@@ -36,14 +37,7 @@
                         <p class="card-text ">
                         {{ post.content | safe }}
                         </p>
-                        <div class="col mt-2 mb-3">
-                            {% if user.id == post.author.id %}
-                            <a href="{% url 'delete_car' post.slug %}"> <button class="btn btn-danger btn-md mx-4"
-                            value="{{ car.slug }}" type="button">Delete</button></a>
-                            <a href="{% url 'edit_car' post.slug %}"> <button class="btn btn-success btn-md mx-4"
-                                value="{{ car.slug }}" type="button">Edit</button></a>
-                            {% endif %}
-                    </div>
+                        
                     <div class="row">
                         <div class="col-1">
                             <strong>
@@ -69,10 +63,17 @@
                                 <!-- Our total_comments variable goes before the closing strong tag -->
                                 {{ total_comments }}</strong>
                             {% endwith %}
-                            
                         </div>
                     </div>
                     <hr>
+                    <div class="col mt-2 mb-3">
+                        {% if user.id == post.author.id %}
+                        <a href="{% url 'delete_car' post.slug %}"> <button class="btn btn-danger btn-md mx-4"
+                        value="{{ car.slug }}" type="button">Delete</button></a>
+                        <a href="{% url 'edit_car' post.slug %}"> <button class="btn btn-success btn-md mx-4"
+                            value="{{ car.slug }}" type="button">Edit</button></a>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>

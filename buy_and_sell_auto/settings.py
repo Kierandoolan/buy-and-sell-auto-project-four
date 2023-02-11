@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'social_django',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
@@ -80,6 +81,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'buy_and_sell_auto.urls'
@@ -95,6 +97,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -102,7 +106,23 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'buy_and_sell_auto.wsgi.application'
 
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.facebook.FacebookOAuth2',
+    'social_core.backends.twitter.TwitterOAuth',
+    'social_core.backends.github.GithubOAuth2',
 
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+LOGIN_REDIRECT_URL = 'home'
+
+SOCIAL_AUTH_FACEBOOK_KEY = '1525309381305922'  # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = 'f6fe6d888061fe5f6341581cf4654936'  # App Secret
+
+SOCIAL_AUTH_GITHUB_KEY = '759aff8e2200eef661c2'
+SOCIAL_AUTH_GITHUB_SECRET = 'f7ec20e03a17519c915a55db9a73b703a26a6921' 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
