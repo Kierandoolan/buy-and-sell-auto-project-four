@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.views.generic import UpdateView, TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.mail import send_mail
 from .models import CarAd, Comment
 from .forms import CommentForm, CarForm, ContactForm
 from django.conf import settings
@@ -165,6 +166,9 @@ def contact_view(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
+            email_subject = f'New contact {form.cleaned_data["email"]}: {form.cleaned_data["subject"]}'
+            email_message = form.cleaned_data['message']
+            send_mail(email_subject, email_message, settings.CONTACT_EMAIL, settings.ADMIN_EMAIL)
             return render(request, 'index.html')
     form = ContactForm()
     context = {'form': form}

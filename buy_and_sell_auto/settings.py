@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+load_dotenv()
 import dj_database_url
 from django.contrib.messages import constants as messages
 if os.path.isfile('env.py'):
@@ -137,6 +139,16 @@ DATABASES = {
      'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
+CONTACT_EMAIL = 'buyandsellauto1234@gmail.com'
+ADMIN_EMAIL = ['buyandsellauto1234@gmail.com', ]
+
+
+# Twilio SendGrid
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
