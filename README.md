@@ -5,7 +5,7 @@ Here is a link to the live project. (https://.herokuapp.com/)
 Buy and Sell Auto is a website for Buying and Selling Cars. It is created using a django framework.
 
 <!--add responsive image here-->
-
+<h2 class="center"><img src="static/images/readme-image/responsive.png"></h2>
 ## Contents 
 
 - [User Experience (UX)](#user-experience-ux)
@@ -51,6 +51,8 @@ A User of the Buy and Sell Auto Page would be someone who is looking to buy or s
 - As a Site User, I can easily navigate around the site and find what i need without any problems.
 - As a Site User, I can view a paginated list of cars posted and i can select any car to view.
 - As a Site User, I can click on a car post so that I can read the authors details, cars key info, description of car and view comments left by users.
+- As a Site User, I can contact the Site Administration about any problems i have.
+- As a Site User, I can contact the Site Administration about what i think would be good for the website in the future.
 
 #### EPIC | User Management
 
@@ -63,7 +65,8 @@ As a Site User, I can comment on another members post and delete the post once s
 
 #### EPIC | Site Administration
 - As a Site Administrator, I can create, read, update and delete posts and comments
-
+- As a Site Administerator, I can view feedback from the User
+- As a Site Administerator, I can view issues from the User
 
 
 
@@ -72,10 +75,19 @@ As a Site User, I can comment on another members post and delete the post once s
   
 
 ### Colour Scheme
--
+<h2 class="center"><img src="static/images/readme-image/color2.png"></h2>
+
+- I got these four colours from the website called [coolors](coolors.co)
+- #000000. This was for the writing of the website.
+- #E5E5E5. This was for th background of the website.
+- #FCA311. This was for hovering over links eg. nav bar. 
+- #FFFFFF. This is the color in forms and car details.
+- #14213D. This was used in the masthead in car details.
 
 ### Typography
-- 
+-  'Gentium Book Plus', Is my main font. In my eyes i found it to be attractive for the page.
+- 'sans-serif' was chosen as fallback font.
+
 ### Imagery
 - 
 
@@ -95,29 +107,98 @@ As a Site User, I can comment on another members post and delete the post once s
 
 ### Database Schema 
 
-## Features
+# Features
 
-### Home Page
+## Home Page
 
-- #### Navigation bar
-   
+### Logo 
+<h2 class="center"><img src="static/images/readme-image/buy-and-sell-auto.jpg"></h2>
 
-- #### Hero Image
-   
+- This is the logo of the site
 
-- #### Features
-    
-- #### Footer
+- ### Navigation bar
+<h2 class="center"><img src="static/images/readme-image/nav-bar.png"></h2>
 
-### Accounts
-- #### Register Page
+- When Logged In. Navigation bar consists of Logo, Home Page, Cars For Sale, Contact Us Page, Add Car Page, Log Out
 
+-   When Logged Out. Navigation bar consists of Logo, Home Page, Cars For Sale, Contact Us Page, Add Car Page,
+Register, Log In.
 
-- #### Login Page
+### Hero Image
+<h2 class="center"><img src="static/images/readme-image/hero-pic.png"></h2>
 
-- #### Log out Page
+- Consist of Hero Pic. and text on the left with a button to browse cars.
 
-- #### Features to add
+### Welcome
+<h2 class="center"><img src="static/images/readme-image/welcome-text.png"></h2>
+
+-A welcome text about the website
+
+### Footer
+  Add Footer
+<h2 class="center"><img src="static/images/readme-image/.png"></h2>
+
+## Browse Cars
+<h2 class="center"><img src="static/images/readme-image/browse-cars.png"></h2>
+
+- Consists of all cars on the page and there is also a paginated function if there is too much.
+
+- User can click into any car  to see its features
+
+## Car Detail
+
+ ### Car Detail Header
+<h2 class="center"><img src="static/images/readme-image/cardetail-header.png"></h2>
+
+- Shows image of car along with name of car, creator and when was it posted.
+
+- ### Car Detail Key Information
+<h2 class="center"><img src="static/images/readme-image/cardetail-keyinfo.png"></h2>
+
+- Shows Key information such as Year,Nct, Phone Number, Price and description. 
+
+- Can also see how many likes and comments it has on the post. 
+
+- If this is the users post they can also edit the post or delete it.
+
+- ### Car Detail Comments
+<h2 class="center"><img src="static/images/readme-image/comments.png"></h2>
+
+- This area shows the comments on the left.
+
+- If signed in users can also comment which is showing on the right. 
+
+## Accounts
+ ### Register Page
+<h2 class="center"><img src="static/images/readme-image/.png"></h2>
+ Add Register Page
+
+ ### Login Page
+<h2 class="center"><img src="static/images/readme-image/login.png"></h2>
+- Sign in Page.
+
+-Ignore the sign in with github. Could not add feature and ran out of time to debug.
+ #### Log out Page
+<h2 class="center"><img src="static/images/readme-image/signout.png"></h2>
+
+ To log out of the site.
+
+- ### Features to add
+<h2 class="center"><img src="static/images/readme-image/add-your-car.png"></h2>
+
+-   Page to add your post if you are logged in.
+
+- Consist of Name of Car, Image, Phone-number, NCT, Year of Car, Price, and a Brief Description with a submit button.
+
+- ### Features to edit
+<h2 class="center"><img src="static/images/readme-image/edit-car-post.png"></h2>
+
+- A user can edit his car post and update to the Browse Car section .
+
+- ### Contact us
+<h2 class="center"><img src="static/images/readme-image/contact-us.png"></h2>
+
+- Contact form for people to contact the admin to give feedback about the page or any issues that they might have. 
 
 ## Technologies
 
