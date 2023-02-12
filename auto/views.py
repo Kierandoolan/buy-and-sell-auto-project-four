@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.views.generic import UpdateView, TemplateView
+from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.mail import send_mail
 from .models import CarAd, Comment
@@ -41,7 +42,8 @@ def AddCar(request):
         new_form = form.save(commit=False)
         new_form.author = request.user
         new_form.save()
-        return redirect('home')
+        messages.success(request, 'Added Car successfully.')
+        return redirect('carlist')
     else:
         form = CarForm()
         context = {
@@ -58,6 +60,7 @@ def EditCar(request, slug):
     if request.method == 'POST':
         form = CarForm(request.POST, request.FILES, instance=item)
         form.save()
+        messages.success(request, 'Updated Car successfully.')
         return redirect('home')
     form = CarForm(instance=item)
     context = {
@@ -72,6 +75,7 @@ def DeleteCar(request, slug):
     """
     car = CarAd.objects.get(slug=slug)
     car.delete()
+    messages.success(request, 'Deleted Car successfully.')
     return redirect('home')
 
 
@@ -79,15 +83,14 @@ class AdLike(View):
     """
     User can add a like to car post
     """
-    def post(self, request, slug):
-        
+    def post(self, request, slug):   
         car = get_object_or_404(CarAd, slug=slug)
 
         if car.likes.filter(id=request.user.id).exists():
             car.likes.remove(request.user)
         else:
             car.likes.add(request.user)
-
+            messages.success(request, 'Liked Post Successfully.')
         return HttpResponseRedirect(reverse('Car_ad_detail', args=[slug]))
 
 
@@ -157,6 +160,7 @@ def delete_comment(request, comment_id):
     """Deletes comment"""
     comment = get_object_or_404(Comment, id=comment_id)
     comment.delete()
+    messages.success(request, 'Deleted Comment.')
     return HttpResponseRedirect(reverse(
         'Car_ad_detail', args=[comment.post.slug]))
 
@@ -166,9 +170,7 @@ def contact_view(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            email_subject = f'New contact {form.cleaned_data["email"]}: {form.cleaned_data["subject"]}'
-            email_message = form.cleaned_data['message']
-            send_mail(email_subject, email_message, settings.CONTACT_EMAIL, settings.ADMIN_EMAIL)
+            messages.success(request, 'Thank you for your mail :).')
             return render(request, 'index.html')
     form = ContactForm()
     context = {'form': form}

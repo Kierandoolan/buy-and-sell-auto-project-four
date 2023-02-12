@@ -51,7 +51,7 @@
                                     {% endif %}
                                 </form>
                                 {% else %}
-                                <span class="text-secondary"><i class="far fa-heart"></i></span>
+                                <span class="text-secondary"><i class="fa-solid fa-heart"></i></span>
                                 {% endif %}
                             <!-- The number of likes goes before the closing strong tag -->
                             <span class="text-secondary">{{ post.number_of_likes }} </span>
@@ -86,7 +86,7 @@
                     {% for comment in comments %}
                     <div class="comments border" style="padding: 10px;">
                         <p class="font-weight-bold">
-                            <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
+                            <!-- The commenter's name goes here. -->
                             {{ comment.name }}
                             <span class=" text-muted font-weight-normal">
                                 <!-- The comment's created date goes here -->

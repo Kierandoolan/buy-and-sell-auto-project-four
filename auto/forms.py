@@ -49,7 +49,7 @@ class CarForm(forms.ModelForm):
                 'type': 'date'
                 }
             ),
-        label='Model Year'
+        label='Year'
     )
 
     nct = forms.DateField(
