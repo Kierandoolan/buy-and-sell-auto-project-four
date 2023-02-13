@@ -73,6 +73,20 @@ font-family: 'Gentium Book Plus', sans-serif;
     transform: translate(-50%, -50%);
   
 }
+
+/* footer */
+footer {
+    height: 150px;
+    width:100%;
+}
+
+
+
+.footer-color {
+    font-size: 150%;
+    color:#FCA311;
+}
+
  /* Home page Details */
 
 .welcome-text {

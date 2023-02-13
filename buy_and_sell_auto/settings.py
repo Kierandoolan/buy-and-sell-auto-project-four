@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.sites',
+    'django_extensions',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -125,6 +126,15 @@ SOCIAL_AUTH_GITHUB_SECRET = 'f7ec20e03a17519c915a55db9a73b703a26a6921'
 
 DATABASES = {
      'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
+
+
+GRAPH_MODELS = {
+  'all_applications': True,
+  'group_models': True,
+  "app_labels": [
+        "auto",
+    ],
 }
 
 #CONTACT_EMAIL = 'buyandsellauto1234@gmail.com'
