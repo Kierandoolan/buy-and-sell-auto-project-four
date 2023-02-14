@@ -1,11 +1,11 @@
 from pathlib import Path
 import os
-from dotenv import load_dotenv
-load_dotenv()
 import dj_database_url
 from django.contrib.messages import constants as messages
 if os.path.isfile('env.py'):
     import env
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -113,7 +113,7 @@ SOCIAL_AUTH_FACEBOOK_KEY = '1525309381305922'  # App ID
 SOCIAL_AUTH_FACEBOOK_SECRET = 'f6fe6d888061fe5f6341581cf4654936'  # App Secret
 
 SOCIAL_AUTH_GITHUB_KEY = '759aff8e2200eef661c2'
-SOCIAL_AUTH_GITHUB_SECRET = 'f7ec20e03a17519c915a55db9a73b703a26a6921' 
+SOCIAL_AUTH_GITHUB_SECRET = 'f7ec20e03a17519c915a55db9a73b703a26a6921'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -137,32 +137,36 @@ GRAPH_MODELS = {
     ],
 }
 
-#CONTACT_EMAIL = 'buyandsellauto1234@gmail.com'
-#ADMIN_EMAIL = [ 'buyandsellauto1234@gmail.com' ]
+# CONTACT_EMAIL = 'buyandsellauto1234@gmail.com'
+# ADMIN_EMAIL = [ 'buyandsellauto1234@gmail.com' ]
 
 
 # Twilio SendGrid
-##EMAIL_HOST = 'smtp.sendgrid.net'
-#EMAIL_PORT = 587
-#EMAIL_USE_TLS = True
-#EMAIL_HOST_USER = 'apikey'
-#EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')
+# EMAIL_HOST = 'smtp.sendgrid.net'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = 'apikey'
+# EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation\
+            .UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation\
+            .MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation\
+            .CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation\
+            .NumericPasswordValidator',
     },
 ]
 
@@ -185,7 +189,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATICFILES_STORAGE = 'cloudinary_storage.storage\
+    .StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 

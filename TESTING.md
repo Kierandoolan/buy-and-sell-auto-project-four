@@ -1,3 +1,24 @@
+
+### WW3C Validator -
+index page [here](https://validator.w3.org/nu/?doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-eu86.gitpod.io%2Fcarlist)
+Carpage[here](https://validator.w3.org/nu/?doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-eu86.gitpod.io%2Fcarlist)
+Car Detail[here](https://validator.w3.org/nu/?showsource=yes&useragent=Validator.nu%2FLV+http%3A%2F%2Fvalidator.w3.org%2Fservices&acceptlanguage=&doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-eu86.gitpod.io%2FBmw%2F#l120c121)
+Contact form text area [here](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-eu86.gitpod.io%2Fcontact%2F#textarea)
+Add Car [here](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-eu86.gitpod.io%2Fadd_car%2F)
+Delete Car text area [here](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-eu86.gitpod.io%2Fedit-car%2Fbmw#textarea)
+Log In [here](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-eu86.gitpod.io%2Faccounts%2Flogin%2F)
+Sign Up [here](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-eu86.gitpod.io%2Faccounts%2Fsignup%2F)
+Sign Out [here](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-eu86.gitpod.io%2Faccounts%2Flogout%2F)
+
+### Jigsaw css validator
+
+RESULT: Congratulations! No Error Found
+add pic
+
+### PEP8CI
+
+Results: All clear, no errors found
+
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
 |-----------------------|------------|--------------------------------------------------------------------|-----------|
 | NavBar                |            |                                                                    |           |

@@ -9,7 +9,6 @@
     <form method="POST" style="margin-top: 1.3em;" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form | crispy }}
-        
         <br>
         <input type="submit" class="btn btn-outline-success button" value="Update">
         {% endif %}

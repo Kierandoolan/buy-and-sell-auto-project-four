@@ -71,6 +71,15 @@ class CarForm(forms.ModelForm):
         label='Image of Car'
     )
 
+    description = forms.CharField(
+        widget=forms.Textarea(
+            attrs={
+                'placeholder': 'Describe the Car',
+                }
+            ),
+        label='Description'
+    )
+
     class Meta:
         model = CarAd
         fields = [

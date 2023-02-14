@@ -19,7 +19,7 @@ def Home(request):
 
 
 class HomeView(LoginRequiredMixin, TemplateView):
-    template_name = "home.html" 
+    template_name = "home.html"
 
 
 class CarAdList(generic.ListView):
@@ -83,7 +83,7 @@ class AdLike(View):
     """
     User can add a like to car post
     """
-    def post(self, request, slug):   
+    def post(self, request, slug):
         car = get_object_or_404(CarAd, slug=slug)
 
         if car.likes.filter(id=request.user.id).exists():
@@ -95,7 +95,7 @@ class AdLike(View):
 
 
 class CarAdDetail(View):
-    """ 
+    """
     For Car Post Details
     """
     def get(self, request, slug, *args, **kwargs):

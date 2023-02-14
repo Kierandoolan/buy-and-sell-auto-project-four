@@ -95,7 +95,7 @@ As a Site User, I can Like another members post.
 - #14213D. This was used in the masthead in car details.
 
 ### Typography
--  'Gentium Book Plus', Is my main font. In my eyes i found it to be attractive for the page.
+-  'Barlow', Is my main font. In my eyes i found it to be attractive for the page.
 - 'sans-serif' was chosen as fallback font.
 
 ### Imagery
