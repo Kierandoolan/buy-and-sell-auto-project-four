@@ -170,6 +170,10 @@ def contact_view(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
+            email_subject = f'New contact {form.cleaned_data["email"]}: \
+                {form.cleaned_data["subject"]}'
+            email_message = form.cleaned_data['message']
+            send_mail(email_subject, email_message, settings.CONTACT_EMAIL, settings.ADMIN_EMAIL)
             messages.success(request, 'Thank you for your mail :).')
             return render(request, 'index.html')
     form = ContactForm()

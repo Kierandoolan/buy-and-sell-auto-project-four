@@ -137,16 +137,16 @@ GRAPH_MODELS = {
     ],
 }
 
-# CONTACT_EMAIL = 'buyandsellauto1234@gmail.com'
-# ADMIN_EMAIL = [ 'buyandsellauto1234@gmail.com' ]
+CONTACT_EMAIL = 'buyandsellauto1234@gmail.com'
+ADMIN_EMAIL = ['buyandsellauto1234@gmail.com']
 
 
 # Twilio SendGrid
-# EMAIL_HOST = 'smtp.sendgrid.net'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'apikey'
-# EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 2525
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_API_KEY')
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -190,7 +190,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage\
-    .StaticHashedCloudinaryStorage'
+.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 

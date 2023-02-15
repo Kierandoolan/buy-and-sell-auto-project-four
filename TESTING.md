@@ -1,22 +1,62 @@
+## WW3C Validator
 
-### WW3C Validator -
-index page [here](https://validator.w3.org/nu/?doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-eu86.gitpod.io%2Fcarlist)
-Carpage[here](https://validator.w3.org/nu/?doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-eu86.gitpod.io%2Fcarlist)
-Car Detail[here](https://validator.w3.org/nu/?showsource=yes&useragent=Validator.nu%2FLV+http%3A%2F%2Fvalidator.w3.org%2Fservices&acceptlanguage=&doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-eu86.gitpod.io%2FBmw%2F#l120c121)
-Contact form text area [here](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-eu86.gitpod.io%2Fcontact%2F#textarea)
-Add Car [here](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-eu86.gitpod.io%2Fadd_car%2F)
-Delete Car text area [here](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-eu86.gitpod.io%2Fedit-car%2Fbmw#textarea)
-Log In [here](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-eu86.gitpod.io%2Faccounts%2Flogin%2F)
-Sign Up [here](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-eu86.gitpod.io%2Faccounts%2Fsignup%2F)
-Sign Out [here](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-eu86.gitpod.io%2Faccounts%2Flogout%2F)
+### Errors in Contact Form and Edit Form
+<h2 class="center"><img src="static/images/test/valid-error.png"></h2>
+
+- In the Contact Form and Edit Form i ran into errors as you can see above. 
+
+- This was when i used text input to check the problems on the page so it doesnt see the "base" of the pages hence the error.
+
+- If i used the address input to check the problems on the page i will also get errors which is forms because of the djangos lay out of the form. 
+
+- I hope these are valid reasons for keeping them as they are as you read through the rest of the validations below. 
+
+### Index
+<h2 class="center"><img src="static/images/test/index-valid.png"></h2>
+
+- index page [here](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-us87.gitpod.io%2F)
+
+### Browse Cars
+<h2 class="center"><img src="static/images/test/carlist-valid.png"></h2>
+
+Carpage [here](https://validator.w3.org/nu/?doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-us87.gitpod.io%2Fcarlist)
+
+### Car Detail
+<h2 class="center"><img src="static/images/test/cardetail-valid.png"></h2>
+
+
+
+### Contact Form (Errors as Explained)
+<h2 class="center"><img src="static/images/test/contact-valid.png"></h2>
+
+- Errors Explained at start
+
+### Add Car
+<h2 class="center"><img src="static/images/test/add-car-valid.png"></h2>
+
+
+### Edit Car (Errors as Explained)
+<h2 class="center"><img src="static/images/test/edit-car-valid.png"></h2>
+
+Errors explained at the start
+
+### Log In
+<h2 class="center"><img src="static/images/test/login-valid.png"></h2>
+
+### -Sign Up
+<h2 class="center"><img src="static/images/test/signup-valid.png"></h2>
+
+### Sign Out
+<h2 class="center"><img src="static/images/test/signout-valid.png"></h2>
 
 ### Jigsaw css validator
 
+<h2 class="center"><img src="static/images/test/css-valid.png"></h2>
 RESULT: Congratulations! No Error Found
-add pic
 
-### PEP8CI
+### PEP8CI 
 
+<h2 class="center"><img src="static/images/test/pep8.png"></h2>
 Results: All clear, no errors found
 
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
@@ -70,7 +110,8 @@ Results: All clear, no errors found
 | Car Content                 | Display             | Display correct  image, title, author, year, phone-number, price, description and nct                 | Pass      |
 | Update Car button           | Click               | Opens Update Car Form                                                                                                | Pass      |
 | Update Car button           | Display             | Button only visible if user is the author                                                                               | Pass      |
-| Delete Car button           | Click     |          Delete Car                                                                                 | Pass      |
+| Delete Car button           | Click     |          Modal Car                         
+                                                            | Pass      |
 | Delete Car button           | Display             | Button only visible if user is the author                                                                               | Pass      |
 | User Comments                  | Display             | Displays correct name date time and comment body                                                                        | Pass      |                                                                                
 | Delete comment button          | Display             | Button only visible if user is the comment author                                                                       | Pass      |
@@ -105,7 +146,7 @@ Results: All clear, no errors found
 | Update Button      | Click   | Success message fades after 3 seconds                                                                                   | Pass      |
 | Update Button      | Click   | User is redirected back to the current car page                                                                      | Pass      |
 
-### Django All Auth Pages
+### Django Sign In, Sign Up, Sign out Pages
 | Element                    | Action                                    | Expected Result                            | Pass/Fail |
 |----------------------------|-------------------------------------------|--------------------------------------------|-----------|
 | Sign Up                    |                                           |                                            |           |
@@ -115,6 +156,12 @@ Results: All clear, no errors found
 | Username field             | Insert correct format                     | On submit: form submit                     | Pass      |
 | Username field             | Insert duplicate username                 | On submit: form won't submit               | Pass      |
 | Username field             | Insert duplicate username                 | Error message displays                     | Pass      |
+| Email field                | Insert incorrect format                   | On submit: form won't submit               | Pass      |
+| Email field                | Insert incorrect format                   | Error message displays                     | Pass      |
+| Email field                | Insert correct format                     | On submit: form submit                     | Pass      |
+| Email field                | Leave empty                               | On submit: form submit                     | Pass      |
+| Email field                | Insert duplicate email                    | On submit: form won't submit               | Pass      |
+| Email field                | Insert duplicate email                    | Error message displays                     | Pass      |
 | Password field             | Insert incorrect format                   | On submit: form won't submit               | Pass      |
 | Password field             | Insert incorrect format                   | Error message displays                     | Pass      |
 | Password field             | Passwords don't match                     | On submit: form won't submit               | Pass      |

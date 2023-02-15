@@ -69,8 +69,20 @@
                     <hr>
                     <div class="col mt-2 mb-3">
                         {% if user.id == post.author.id %}
-                        <a href="{% url 'delete_car' post.slug %}"> <button class="btn btn-danger btn-md mx-4"
-                        value="{{ car.slug }}" type="button">Delete</button></a>
+                        <!--model for deleting car-->
+                        <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-danger">Delete Car</button>
+                        <div id="id01" class="modal">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+                            <form class="modal-content" action="/action_page.php">
+                                <h1>Your About To Delete Your Post!</h1>
+                                <p>Are you sure? You Cant get it back?</p>
+                                <div class="clearfix">
+                                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-success">Cancel</button>
+                                    <a href="{% url 'delete_car' post.slug %}"><button type="button" value="{{ car.slug }}" class="btn btn-danger"
+                                        onclick="document.getElementById('id01').style.display='none'" class="deletebtn">Delete</button> </a>
+                                </div>
+                            </form>
+                        </div>
                         <a href="{% url 'edit_car' post.slug %}"> <button class="btn btn-success btn-md mx-4"
                             value="{{ car.slug }}" type="button">Edit</button></a>
                         {% endif %}

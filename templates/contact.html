@@ -6,13 +6,12 @@
         to improve the website or if you have any issues at all please write to us!!
     </h3> 
     <div class="container col-md-8 p-5 mb-3">
-        <form method="post"  enctype="multipart/form-data" ></form>
+        <form method="post"  enctype="multipart/form-data" >
             {% csrf_token %}
             {{ form }}
             <input type="submit" class="btn btn-outline-success button">
         </form>
     </div>
 </div>
-
 
 {% endblock content %}

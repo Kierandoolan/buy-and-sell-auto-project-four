@@ -235,6 +235,22 @@ Register, Log In.
 
 -   Messages are used like above for signing in, signing out, deleted car, adding car, editing car, commenting and also filling out the contact form. 
 
+### Features to Add in the Future. 
+- There is plenty of features i have in mind for this project and i wish i could of included more but with errors and time constraints i ran into problems. I will be putting these in after the grading. However the features i would include are:
+
+- Profile log in so you can read about the user and possible see if they have sold cars on the site before.
+
+- Contact Form Sent to my email account along with my django admin account. I did try to include this feature but i was having
+trouble with SendGrid who would authorise my email. [This link is what i tried to set it up with.](https://www.twilio.com/blog/build-contact-form-python-django-twilio-sendgrid)
+
+- Signing up with Social Media Accounts
+
+- Search Bar that filters through cars.
+
+- A feature to add multiple images and a video.
+
+
+
 ## Technologies
 
 ### Languages used
@@ -280,7 +296,7 @@ Register, Log In.
     - Used to validate HTML code.
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
     - Used to validate CSS code.
-- [Pep8](http://pep8online.com/)
+- [PEP8CI](http://pep8com/)
     - Used to validate Python code.
 - [JSHint](https://jshint.com/)
     - Used to validate JS code.
