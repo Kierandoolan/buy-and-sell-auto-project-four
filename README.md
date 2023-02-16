@@ -1,6 +1,6 @@
 # Buy and Sell Auto
 
-Here is a link to the live project. (https://.herokuapp.com/)
+Here is a link to the live project. (https://buy-and-sell-auto.herokuapp.com/)
 
 Buy and Sell Auto is a website for Buying and Selling Cars. It is created using a django framework.
 
@@ -25,17 +25,13 @@ Buy and Sell Auto is a website for Buying and Selling Cars. It is created using 
    * [Languages used](#languages-used)
    * [Libraries & Programs Used](#libraries-and-programs-used)
 
-- [Testing](#)
+- [Testing](#testing)
   
 - [Deployment](#deployment)
-   * [Github pages](#github)
-   * [Django and Heroku](#django-and-heroku)
-   * [Forking](#forking)
-   * [Clone](#clone)
+   
 
 - [Credits](#credits)
    * [Code](#code)
-   * [Media](#media)
 
 ## User Experience (UX)
 A User of the Buy and Sell Auto Page would be someone who is looking to buy or sell there car or cars. It could also be for someone who has an interest in cars and are looking to browse.
@@ -222,6 +218,11 @@ Register, Log In.
 
 - A user can edit his car post and update to the Browse Car section .
 
+- ### Delete Car Modal
+<h2 class="center"><img src="static/images/readme-image/modal.png"></h2>
+
+- A pop up modal appears when the user clicks delete car.
+
 - ### Contact us
 <h2 class="center"><img src="static/images/readme-image/contact-us.png"></h2>
 
@@ -316,7 +317,9 @@ This Project was tested manually.
 
 Testing and results can be found [here](/TESTING.md)
 
-# Deployment - Heroku
+# Deployment
+
+## Heroku
 
 To deploy this page to Heroku from its GitHub repository, the following steps were taken:
 
@@ -364,14 +367,14 @@ Add the following Config Vars in Heroku:
 
 The site is now live and operational.
 ## Forking this repository
-- Locate the repository at this link [Buy and Sell Auto]().
+- Locate the repository at this link [Buy and Sell Auto](https://buy-and-sell-auto.herokuapp.com/).
 - At the top of the repository, on the right side of the page, select "Fork" from the buttons available. 
 - A copy of the repository is now created.
 
 ## Cloning this repository
 To clone this repository follow the below steps: 
 
-1. Locate the repository at this link [Buy and Sell Auto](). 
+1. Locate the repository at this link [Buy and Sell Auto](https://buy-and-sell-auto.herokuapp.com/). 
 2. Under **'Code'**, see the different cloning options, HTTPS, SSH, and GitHub CLI. Click the prefered cloning option, and then copy the link provided. 
 3. Open **Terminal**.
 4. In Terminal, change the current working directory to the desired location of the cloned directory.
@@ -398,4 +401,8 @@ To clone this repository follow the below steps:
 -   Also to my military work collegues who i'm sharing a room with for the last 4 months in Lebanon for their patiences with me during my time doing this. 
 
  ### Other
+
+ ## Media
+
+ - ALL my pictures are from a stock site called [Pexels](www.pexels.com)
 

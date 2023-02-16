@@ -14,12 +14,12 @@
 ### Index
 <h2 class="center"><img src="static/images/test/index-valid.png"></h2>
 
-- index page [here](https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-us87.gitpod.io%2F)
+- index page [here]
 
 ### Browse Cars
 <h2 class="center"><img src="static/images/test/carlist-valid.png"></h2>
 
-Carpage [here](https://validator.w3.org/nu/?doc=https%3A%2F%2F8000-kierandoola-buyandsella-bnvqpwgfry1.ws-us87.gitpod.io%2Fcarlist)
+Carpage [here]
 
 ### Car Detail
 <h2 class="center"><img src="static/images/test/cardetail-valid.png"></h2>
@@ -191,3 +191,50 @@ Results: All clear, no errors found
 | Logout button              | Click                                     | Redirect to homepage                       | Pass      |
 | Logout button              | Click                                     | Success message confirming log out appears | Pass      |
 | Logout button              | Click                                     | Success message fades after 3 seconds      | Pass      |
+
+
+## Issues fixed.
+
+### Validator
+- There was a few silly mistakes in the WW3C validator for Html but they were quickly fixed,.
+
+### Car Detail Page
+<h2 class="center"><img src="static/images/test/error-fix.png"></h2>
+
+- I Kept get this error when going into carDetail. However with a little bit of research and help i found out its to do with my urls.py. They were all in an unordered fashion. So i reorder my paths so that the most ambiguous paths come at the end.
+
+### Form Page
+<h2 class="center"><img src="static/images/test/valueerror.png"></h2>
+
+- When testing on an Iphone on the I kept getting valueError on it although it was working perfectly on the desktop. 
+ When changing the forms fields around it worked.
+
+### No Slug in Add
+<h2 class="center"><img src="static/images/test/slug-error.png"></h2>
+
+I was having trouble clicking into an Ad posted. The issue was the ad didnt have a slug so the bottom image was added with the help of a tutor. 
+<h2 class="center"><img src="static/images/test/error-fix.png"></h2>
+
+## Issues not fixed.
+
+### SendGrid Emails
+
+ I tried to add a contact form that sends to admin email address via SendGrid but i ran into trouble.
+ <h2 class="center"><img src="static/images/test/stmp-error.png"></h2>
+
+- I was looking on Stackoverflow for answers and help. I tried i few ideas that were there but unfortunlately i ran out of time. At the end of these i will look into it deeper to find a solution. 
+
+<h2 class="center"><img src="static/images/test/error-sendgrid.png"></h2>
+
+-   It could be possible they needed to validated me on the website which i tried but no reply and i unfortunlately ran out of time. 
+
+### Log in with social media. 
+
+- I tried to do log in with social media which included facebook, twitter and github. I did this with help of [studygyaan] (https://studygyaan.com/django/how-to-add-social-login-to-django)
+I could reach the third party website and when i clicked contintue it would come up with "localhost refused to connect." Tried multiply ways to fix this but I also ran out of time. 
+
+- I hope to also come back and fix this in a later stage. 
+
+
+
+
