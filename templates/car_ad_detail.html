@@ -20,14 +20,14 @@
             <div class="col card mb-4  mt-3 left  top">
                 <div class="card-body">
                     <div class="container mt-3">
-                        <h5>Key Info</h5>
+                        <h3>Key Info</h3>
                         <hr class="red-left">
                         <p>Year: {{ post.year }}</p>
                         <p>NCT Expiry: {{ post.nct }}</p>
                         <p>Phone Number: {{ post.number }}</p> 
                         <p>Price: €{{ post.price }}</p>
                         <br>
-                        <h5>Detailed Info</h5>
+                        <h3>Detailed Info</h3>
                         <hr class="red-left">
                         <p class="text-justify">{{ post.description | linebreaks }}</p>
                         
@@ -46,9 +46,9 @@
                                 <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                                     {% csrf_token %}
                                     {% if liked %}
-                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" ><i class="fas fa-heart"></i></button>
-                                    {% else %}
-                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" ><i class="far  fa-heart"></i></button>
+                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like" ><i class="fas fa-heart"></i></button>
+                                    {% else %}\
+                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like" ><i class="far fa-heart"></i></button>
                                     {% endif %}
                                 </form>
                                 {% else %}
