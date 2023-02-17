@@ -34,7 +34,7 @@ Buy and Sell Auto is a website for Buying and Selling Cars. It is created using 
    * [Code](#code)
 
 ## User Experience (UX)
-A User of the Buy and Sell Auto Page would be someone who is looking to buy or sell there car or cars. It could also be for someone who has an interest in cars and are looking to browse.
+A User of the Buy and Sell Auto Page would be someone who is looking to buy or sell their car or cars. It could also be for someone who has an interest in cars and are looking to browse.
 
 ## User Stories 
 #### EPIC | User Profile
@@ -58,7 +58,7 @@ A User of the Buy and Sell Auto Page would be someone who is looking to buy or s
 - As a site user/ admin i can view comments about an individual vehicle so that i can read the conversation about the vehicle
 - As a site user i can click a vehicle posted  so that see the full description of vehicle 
 - As a site user i can view a list of vehicles for sale so that i can select one to read about 
-As a Site User, I can Like another members post.
+- As a Site User, I can Like another members post.
 - As a Site User, I can comment on another members post and delete the post once site admin as approved it.
 
 #### EPIC | Site Administration
@@ -83,15 +83,15 @@ As a Site User, I can Like another members post.
 ### Colour Scheme
 <h2 class="center"><img src="static/images/readme-image/color2.png"></h2>
 
-- I got these four colours from the website called [coolors](coolors.co)
+- I got these five colours from the website called [coolors](coolors.co)
 - #000000. This was for the writing of the website.
-- #E5E5E5. This was for th background of the website.
+- #E5E5E5. This was for the background of the website.
 - #FCA311. This was for hovering over links eg. nav bar. 
 - #FFFFFF. This is the color in forms and car details.
 - #14213D. This was used in the masthead in car details.
 
 ### Typography
--  'Barlow', Is my main font. In my eyes i found it to be attractive for the page.
+-  'Barlow', Is my main font. I believe it to be attractive for the page.
 - 'sans-serif' was chosen as fallback font.
 
 ### Imagery
@@ -107,29 +107,32 @@ As a Site User, I can Like another members post.
 -   To View Browse Cars Mobile click [here](docs/wireframes/browse-cars-mobile.png).
 -   To View Browse Cars Tablet click [here](docs/wireframes/browse-cars-tablet.png).
 -   To View Car Detail DeskTop click [here](docs/wireframes/car-detail-desktop.png).
--   To View Car Detail Tablet click [here](docs/wireframes/car-detail-tablet.png).
+-   To View Car Detail Ipad click [here](docs/wireframes/car-detail-tablet.png).
 -   To View Car Detail Mobile click [here](docs/wireframes/cardetail-mobile.png).
 
 
-### Database Schema 
+## Database Schema 
+
 <h2 class="center"><img src="static/images/readme-image/dataschema.png"></h2>
 
-I used principles of Object-Oriented Programming throughout this project and Django’s Class-Based Generic Views.
+- I used principles of Object-Oriented Programming throughout this project and Django’s Class-Based Generic Views.
 
-Django AllAuth was used for the user authentication system.
+- Django AllAuth was used for the user authentication system.
 
-The Three Custom Models Used are CarAd, Comment and Contact
+- The Three Custom Models Used are CarAd, Comment and Contact
 
 # Features
 
 ## Home Page
 
 ### Logo 
+
 <h2 class="center"><img src="static/images/readme-image/buy-and-sell-auto.jpg"></h2>
 
 - This is the logo of the site
 
-- ### Navigation bar
+ ### Navigation bar
+
 <h2 class="center"><img src="static/images/readme-image/nav-bar.png"></h2>
 
 - When Logged In. Navigation bar consists of Logo, Home Page, Cars For Sale, Contact Us Page, Add Car Page, Log Out
@@ -151,16 +154,16 @@ Register, Log In.
 
 <h2 class="center"><img src="static/images/readme-image/footer.png"></h2>
 
--   A simple footer that has a background of black and orange writing/.
+-   A simple footer that has a background of black and orange writing.
 
 -   It has the Creators name and also social media links that opening in a new tab.
 
 ## Browse Cars
 <h2 class="center"><img src="static/images/readme-image/browse-cars.png"></h2>
 
-- Consists of all cars on the page and there is also a paginated function if there is too much.
+- Consists of all cars on the page and there is also a paginated function if there is too many cars.
 
-- User can click into any car  to see its features
+- User can click into any car to see its features
 
 ## Car Detail
 
@@ -201,6 +204,7 @@ Register, Log In.
 -   Sign in Page.
 
 -   Ignore the sign in with github. Could not add feature and ran out of time to debug.
+
  ### Log out Page
 <h2 class="center"><img src="static/images/readme-image/signoutpage.png"></h2>
 
@@ -243,7 +247,7 @@ Register, Log In.
 
  <h2 class="center"><img src="static/images/readme-image/carpost-admin.png"></h2>
 
- - The admin page can filter thorugh all posts, comments and throgh the contact forms. The admin can approve comments onto the page and delete what is not appropriate. The admin can also look through thre feedback and issues that may arise from a user. 
+ - The admin page can filter thorugh all posts, comments and through the contact forms. The admin can approve comments onto the page and delete what is not appropriate. The admin can also look through thre feedback and issues that may arise from a user. 
 
 ## 404 Page
 
@@ -255,10 +259,10 @@ Register, Log In.
 
 - Profile log in so you can read about the user and possible see if they have sold cars on the site before.
 
-- Contact Form Sent to my email account along with my django admin account. I did try to include this feature but i was having
-trouble with SendGrid who would authorise my email. [This link is what i tried to set it up with.](https://www.twilio.com/blog/build-contact-form-python-django-twilio-sendgrid)
+- Contact Form sent to my email account along with my django admin account. I did try to include this feature but i was having
+trouble with SendGrid who wouldn't authorise my email. [This link is what i tried to set it up with.](https://www.twilio.com/blog/build-contact-form-python-django-twilio-sendgrid). I will try this with gmail the simple mail transfer protocol (SMTP) in the future
 
-- Signing up with Social Media Accounts
+- Signing up with Social Media Accounts.
 
 - Search Bar that filters through cars.
 
@@ -311,12 +315,12 @@ trouble with SendGrid who would authorise my email. [This link is what i tried t
     - Used to validate HTML code.
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input)
     - Used to validate CSS code.
-- [PEP8CI](http://pep8com/)
+- [PEP8CI](https://pep8ci.herokuapp.com/)
     - Used to validate Python code.
 - [JSHint](https://jshint.com/)
     - Used to validate JS code.
 - [Summernote](https://summernote.org/)
-    - Used to add a WYSIWYG text box to the add recipe page.
+    - Used to add a WYSIWYG text box.
 - [Crispy Forms](https://django-crispy-forms.readthedocs.io)
     - Used for forms.
 - [Heroku](https://www.heroku.com/)
@@ -388,7 +392,7 @@ The site is now live and operational.
 ## Cloning this repository
 To clone this repository follow the below steps: 
 
-1. Locate the repository at this link [Buy and Sell Auto](https://buy-and-sell-auto.herokuapp.com/). 
+1. Locate the repository at this link [Buy and Sell Auto](https://github.com/Kierandoolan/buy-and-sell-auto-project-four). 
 2. Under **'Code'**, see the different cloning options, HTTPS, SSH, and GitHub CLI. Click the prefered cloning option, and then copy the link provided. 
 3. Open **Terminal**.
 4. In Terminal, change the current working directory to the desired location of the cloned directory.
@@ -416,7 +420,10 @@ To clone this repository follow the below steps:
 
  ### Other
 
- ## Media
+- I came to realised i have not commited my work as much as i should of. On one of my projects i committed too much and now as i come to the end of these i regret that i didn't commit my work as much as i could of. 
 
+- In this work i felt i could of gave more. I made some big errors but from these errors i learnt alot and it makes me feel more comfortable about how everything works within the project. I hope after this i can continue the work of it to make it more useful for a real world application.
+
+ ## Media
  - ALL my pictures are from a stock site called [Pexels](www.pexels.com)
 

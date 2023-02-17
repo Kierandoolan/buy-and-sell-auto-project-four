@@ -17,7 +17,7 @@
 
 - This was when i used text input to check the problems on the page so it doesnt see the "base" of the pages hence the error.
 
-- If i used the address input to check the problems on the page i will also get errors which is forms because of the djangos lay out of the form. 
+- If i used the address input to check the problems on the page i will also get errors which is from the forms because of the djangos lay out of the form. 
 
 - I hope these are valid reasons for keeping them as they are as you read through the rest of the validations below. 
 
@@ -51,7 +51,7 @@ Errors explained at the start
 ### Log In
 <h2 class="center"><img src="static/images/test/login-valid.png"></h2>
 
-### -Sign Up
+### Sign Up
 <h2 class="center"><img src="static/images/test/signup-valid.png"></h2>
 
 ### Sign Out
@@ -115,8 +115,8 @@ Manual Testing was done to see if everything worked:
 | Element               | Action  | Expected Result                 | Pass/Fail |
 |-----------------------|---------|---------------------------------|-----------|
 | Car Ad cards       | Click   | Click on body opens Car Ad | Pass      |
-| Car Ad Card | Pagination              | Site will paginate 12 recipe cards to a page                                             | Pass      |
-| Car Ad Card | Order                   | Recipes are sorted by newest to oldest                                                  | Pass      |
+| Car Ad Card | Pagination              | Site will paginate 12 Cars cards to a page                                             | Pass      |
+| Car Ad Card | Order                   | Cars are sorted by newest to oldest                                                  | Pass      |
 | Car Ad Card | Hover                   | Add Orange to car name                                                                         | Pass      |
 
 ### Car Ad Detail
@@ -130,13 +130,13 @@ Manual Testing was done to see if everything worked:
 | User Comments                  | Display             | Displays correct name date time and comment body                                                                        | Pass      |                                                                                
 | Delete comment button          | Display             | Button only visible if user is the comment author                                                                       | Pass      |
 | Confirm delete button          | Click               | Comment is removed from comment section                                                                                 | Pass      |
-| Confirm delete button          | Click               | Success message fades after 3 seconds                                                                                   | Pass      |e button           | Click               | Redirect user back to recipe page                                                                                       | Pass      |
+| Confirm delete button          | Click               | Success message fades after 3 seconds                                                                                   | Pass      |e button           | Click               | Redirect user back to Car Detail Page page                                                                                       | Pass      |
 | Add comment Form               | Display             | Form only visible if user is logged in                                                                                  | Pass      |
 | Add comment Form submit button | Leave empty               | On submit: form won't submit                                                                                            | Pass      |
 | Add comment Form submit button | Leave empty               | Error message displays                                                                                                  | Pass      |
-| Add comment Form submit button | Filled in               | Form submit - page updates and comment displays in comments section with correct content                                | Pass      |
-| Add comment Form submit button | Click               | Success message appears informing the user that the comment has been added                                              | Pass      |
-| Add comment Form submit button | Click               | Success message fades after 3 seconds  
+| Add comment Form submit button | Filled in               | Form submit to Admin                                | Pass      |
+| Add comment Form submit button | Click               | Success message appears for admin approval                                            | Pass      |
+| Add comment Form submit button | Click               | Success message fades after 3 seconds | Pass 
 
 ### Add Car Page
 | Element                       | Action                | Expected Result                                                                                                     | Pass/Fail |
@@ -149,7 +149,7 @@ Manual Testing was done to see if everything worked:
 | Add Car Submit button(form valid) | Click                 | Form submit                                                                                                         | Pass      |
 | Add Car Submit button(form valid) | Click                 | Redirect to Car Ad detail page with all information displaying correctly                             | Pass      |
 | Add Car Submit button(form valid) | Click                 | Success message appears informing the user that the car has been created                                         | Pass      |
-| Add Car Submit button(form valid) | Click                 | Success message fades after 3 seconds                                                                               | 
+| Add Car Submit button(form valid) | Click                 | Success message fades after 3 seconds                                                                               | Pass
 
 ### Edit Car Add Page
 | Element            | Action  | Expected Result                                                                                                         | Pass/Fail |
@@ -215,18 +215,18 @@ Manual Testing was done to see if everything worked:
 ### Car Detail Page
 <h2 class="center"><img src="static/images/test/error-fix.png"></h2>
 
-- I Kept get this error when going into carDetail. However with a little bit of research and help i found out its to do with my urls.py. They were all in an unordered fashion. So i reorder my paths so that the most ambiguous paths come at the end.
+- I kept get this error when going into carDetail. However with a little bit of research and help i found out its to do with my urls.py. They were all in an unordered fashion. So i reorder my paths so that the most ambiguous paths come at the end.
 
 ### Form Page
 <h2 class="center"><img src="static/images/test/valueerror.png"></h2>
 
-- When testing on an Iphone on the I kept getting valueError on it although it was working perfectly on the desktop. 
+- When testing on an Iphone I kept getting valueError on it although it was working perfectly on the desktop. 
  When changing the forms fields around it worked.
 
 ### No Slug in Add
 <h2 class="center"><img src="static/images/test/slug-error.png"></h2>
 
-- I was having trouble clicking into an Ad posted. The issue was the ad didnt have a slug so the bottom image was added with the help of a tutor. 
+- I was having trouble clicking into an ad posted. The issue was the ad didnt have a slug so the bottom image was added with the help of a tutor. 
 <h2 class="center"><img src="static/images/test/error-fix.png"></h2>
 
 ## Issues not fixed.
@@ -236,12 +236,13 @@ Manual Testing was done to see if everything worked:
 - I tried to add a contact form that sends to admin email address via SendGrid but i ran into trouble.
  <h2 class="center"><img src="static/images/test/stmp-error.png"></h2>
 
-- I was looking on Stackoverflow for answers and help. I tried i few ideas that were there but unfortunlately i ran out of time. At the end of these i will look into it deeper to find a solution. 
+- I was looking on Stackoverflow for answers and help. I tried a few ideas that were there but unfortunlately i ran out of time. I will look into it deeper to find a solution. 
 
 <h2 class="center"><img src="static/images/test/error-sendgrid.png"></h2>
 
 - It could be possible they needed to validated me on the website which i tried but no reply and i unfortunlately ran out of time. 
 
+- [This link is what i tried to set it up with this link.](https://www.twilio.com/blog/build-contact-form-python-django-twilio-sendgrid)
 ### Log in with social media. 
 
 - I tried to do log in with social media which included facebook, twitter and github. I did this with help of [studygyaan] (https://studygyaan.com/django/how-to-add-social-login-to-django)
