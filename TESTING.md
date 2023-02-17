@@ -254,19 +254,19 @@ I could reach the third party website and when i clicked contintue it would come
 ## Lighthouse Rating
 
 ### Home Page
-<h2 class="center"><img src="static/images/test/error-fix.png"></h2>
+<h2 class="center"><img src="static/images/test/homepage-lighthouse.png"></h2>
 
 ### Browse Page
-<h2 class="center"><img src="static/images/test/error-fix.png"></h2>
+<h2 class="center"><img src="static/images/test/car-for-sale.png"></h2>
 
 ### Car Detail Page
-<h2 class="center"><img src="static/images/test/error-fix.png"></h2>
+<h2 class="center"><img src="static/images/test/.png"></h2>
 
 ### Log In Page
-<h2 class="center"><img src="static/images/test/error-fix.png"></h2>
+<h2 class="center"><img src="static/images/test/login-lighthouse.png"></h2>
 
-### Sign In Page
-<h2 class="center"><img src="static/images/test/error-fix.png"></h2>
+### Sign Up Page
+<h2 class="center"><img src="static/images/test/register-lighthouse.png"></h2>
 
 ### Log Out Page
 <h2 class="center"><img src="static/images/test/error-fix.png"></h2>

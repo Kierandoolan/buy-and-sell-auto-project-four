@@ -219,18 +219,18 @@ footer {
 /* Like Feature */
 
 .btn-like {
-    color: #FCA311;
+    color: #E84610;
     border: none;
     background: transparent;
 }
-
 
 .btn-like:hover,
 .btn-like:active {
-    color: #FCA311;
+    color: #E84610;
     background: transparent;
     border: none;
 }
+
 
 /*Contact Form*/
 
