@@ -99,23 +99,25 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'buy_and_sell_auto.wsgi.application'
 
-AUTHENTICATION_BACKENDS = (
-    'social_core.backends.facebook.FacebookOAuth2',
-    'social_core.backends.twitter.TwitterOAuth',
-    'social_core.backends.github.GithubOAuth2',
+# Come Back to this in the Future
 
-    'django.contrib.auth.backends.ModelBackend',
-)
+#AUTHENTICATION_BACKENDS = (
+#    'social_core.backends.facebook.FacebookOAuth2',
+#    'social_core.backends.twitter.TwitterOAuth',
+#    'social_core.backends.github.GithubOAuth2',
+#
+#   'django.contrib.auth.backends.ModelBackend',
+#)
 
-LOGIN_URL = 'login'
-LOGOUT_URL = 'logout'
-LOGIN_REDIRECT_URL = 'home'
+#LOGIN_URL = 'login'
+#LOGOUT_URL = 'logout'
+#LOGIN_REDIRECT_URL = 'home'
 
-SOCIAL_AUTH_FACEBOOK_KEY = '1525309381305922'  # App ID
-SOCIAL_AUTH_FACEBOOK_SECRET = 'f6fe6d888061fe5f6341581cf4654936'  # App Secret
+#SOCIAL_AUTH_FACEBOOK_KEY = '1525309381305922'  # App ID
+#SOCIAL_AUTH_FACEBOOK_SECRET = 'f6fe6d888061fe5f6341581cf4654936'  # App Secret
 
-SOCIAL_AUTH_GITHUB_KEY = '759aff8e2200eef661c2'
-SOCIAL_AUTH_GITHUB_SECRET = 'f7ec20e03a17519c915a55db9a73b703a26a6921'
+#SOCIAL_AUTH_GITHUB_KEY = '759aff8e2200eef661c2'
+#SOCIAL_AUTH_GITHUB_SECRET = 'f7ec20e03a17519c915a55db9a73b703a26a6921'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
@@ -139,6 +141,8 @@ GRAPH_MODELS = {
     ],
 }
 
+#Come Back To This in The Future
+ 
 # CONTACT_EMAIL = 'buyandsellauto1234@gmail.com'
 # ADMIN_EMAIL = ['buyandsellauto1234@gmail.com']
 
