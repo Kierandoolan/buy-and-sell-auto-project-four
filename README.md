@@ -179,7 +179,7 @@ Register, Log In.
 - If this is the users post they can also edit the post or delete it.
 
  ### Car Detail Comments
-<h2 class="center"><img src="static/images/readme-image/comments.png"></h2>
+<h2 class="center"><img src="static/images/readme-image/cardetail-comments.png"></h2>
 
 - This area shows the comments on the left.
 
@@ -201,40 +201,51 @@ Register, Log In.
 -   Sign in Page.
 
 -   Ignore the sign in with github. Could not add feature and ran out of time to debug.
- #### Log out Page
+ ### Log out Page
 <h2 class="center"><img src="static/images/readme-image/signoutpage.png"></h2>
 
  To log out of the site.
 
-- ### Features to add Car
+ ### Features to add Car
 <h2 class="center"><img src="static/images/readme-image/add-your-car.png"></h2>
 
 -   Page to add your post if you are logged in.
 
 - Consist of Name of Car, Image, Phone-number, NCT, Year of Car, Price, and a Brief Description with a submit button.
 
-- ### Features to edit Car
+ ### Features to edit Car
 <h2 class="center"><img src="static/images/readme-image/edit-car-post.png"></h2>
 
 - A user can edit his car post and update to the Browse Car section .
 
-- ### Delete Car Modal
+ ### Delete Car Modal
 <h2 class="center"><img src="static/images/readme-image/modal.png"></h2>
 
 - A pop up modal appears when the user clicks delete car.
 
-- ### Contact us
+ ### Contact us
 <h2 class="center"><img src="static/images/readme-image/contact-us.png"></h2>
 
 - Contact form for people to contact the admin to give feedback about the page or any issues that they might have.
 
-- Once this is Posted the Admin can look at these on the django admin page.
+#### Contact form admin
 
-- ### Messages
+
+- Once this is Posted the Admin can look at these on the django admin page.
+<h2 class="center"><img src="static/images/readme-image/contactform.png"></h2>
+
+ ### Messages
 
 <h2 class="center"><img src="static/images/readme-image/signout.png"></h2>
 
 -   Messages are used like above for signing in, signing out, deleted car, adding car, editing car, commenting and also filling out the contact form. 
+
+ ### Admin Page
+
+ <h2 class="center"><img src="static/images/readme-image/carpost-admin.png"></h2>
+
+ - The admin page can filter thorugh all posts, comments and throgh the contact forms. The admin can approve comments onto the page and delete what is not appropriate. The admin can also look through thre feedback and issues that may arise from a user. 
+
 
 ### Features to Add in the Future. 
 - There is plenty of features i have in mind for this project and i wish i could of included more but with errors and time constraints i ran into problems. I will be putting these in after the grading. However the features i would include are:

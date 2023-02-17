@@ -246,6 +246,7 @@ input[type=text], input[type=email], textarea {
 /* Media Queries */
 
 @media only screen and (max-width: 555px) {
+
     .hero-text {
         width:50%;
     }

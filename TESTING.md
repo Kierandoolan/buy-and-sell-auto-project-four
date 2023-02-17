@@ -57,7 +57,14 @@ RESULT: Congratulations! No Error Found
 ### PEP8CI 
 
 <h2 class="center"><img src="static/images/test/pep8.png"></h2>
-Results: All clear, no errors found
+
+- Results: All clear, no errors found (except settings.py)
+
+- I had to leave the "AUTH_PASSWORD_VALIDATORS" in settings.py as "line too long" as it was causing trouble adding a new superuser and also changing password. 
+
+## Manual Test
+
+Manual Testing was done to see if everything worked:
 
 | Element               | Action     | Expected Result                                                    | Pass/Fail |
 |-----------------------|------------|--------------------------------------------------------------------|-----------|
