@@ -20,7 +20,7 @@
             <div class="col card mb-4  mt-3 left  top">
                 <div class="card-body">
                     <div class="container mt-3">
-                        <h3>Key Info</h3>
+                        <h2>Key Info</h2>
                         <hr class="red-left">
                         <p>Year: {{ post.year }}</p>
                         <p>NCT Expiry: {{ post.nct }}</p>
@@ -47,7 +47,7 @@
                                     {% csrf_token %}
                                     {% if liked %}
                                     <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like" ><i class="fas fa-heart"></i></button>
-                                    {% else %}\
+                                    {% else %}
                                     <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like" ><i class="far fa-heart"></i></button>
                                     {% endif %}
                                 </form>

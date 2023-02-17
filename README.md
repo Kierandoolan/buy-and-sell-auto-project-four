@@ -1,6 +1,6 @@
 # Buy and Sell Auto
 
-Here is a link to the live project. (https://buy-and-sell-auto.herokuapp.com/)
+[Here is a link to the live project](https://buy-and-sell-auto.herokuapp.com/)
 
 Buy and Sell Auto is a website for Buying and Selling Cars. It is created using a django framework.
 
@@ -230,7 +230,6 @@ Register, Log In.
 
 #### Contact form admin
 
-
 - Once this is Posted the Admin can look at these on the django admin page.
 <h2 class="center"><img src="static/images/readme-image/contactform.png"></h2>
 
@@ -246,8 +245,12 @@ Register, Log In.
 
  - The admin page can filter thorugh all posts, comments and throgh the contact forms. The admin can approve comments onto the page and delete what is not appropriate. The admin can also look through thre feedback and issues that may arise from a user. 
 
+## 404 Page
+
+<h2 class="center"><img src="static/images/readme-image/404.png"></h2>
 
 ### Features to Add in the Future. 
+
 - There is plenty of features i have in mind for this project and i wish i could of included more but with errors and time constraints i ran into problems. I will be putting these in after the grading. However the features i would include are:
 
 - Profile log in so you can read about the user and possible see if they have sold cars on the site before.

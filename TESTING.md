@@ -1,5 +1,12 @@
 # Testing Page
-
+   * [WW3C Validator](#WW3CValidator)
+   * [Jigsaw css validator](#Jigsaw-css-validator)
+   * [PEP8CI ](#pep8ci)
+   * [Manual Testing](#Manual-Test)
+   * [Issues Fixed](#issues-fixed)
+   * [Issues Not Fixed](#issues-not-fixed)
+   * [Responive Testing](#reponsive-testing)
+   * [Lighthouse](#lighthouse-rating)
 
 ## WW3C Validator
 
@@ -16,13 +23,11 @@
 
 ### Index
 <h2 class="center"><img src="static/images/test/index-valid.png"></h2>
-
-- index page [here]
+ 
 
 ### Browse Cars
 <h2 class="center"><img src="static/images/test/carlist-valid.png"></h2>
-
-Carpage [here]
+ 
 
 ### Car Detail
 <h2 class="center"><img src="static/images/test/cardetail-valid.png"></h2>
@@ -52,12 +57,12 @@ Errors explained at the start
 ### Sign Out
 <h2 class="center"><img src="static/images/test/signout-valid.png"></h2>
 
-### Jigsaw css validator
+## Jigsaw css validator
 
 <h2 class="center"><img src="static/images/test/css-valid.png"></h2>
 RESULT: Congratulations! No Error Found
 
-### PEP8CI 
+## PEP8CI 
 
 <h2 class="center"><img src="static/images/test/pep8.png"></h2>
 
@@ -120,8 +125,7 @@ Manual Testing was done to see if everything worked:
 | Car Content                 | Display             | Display correct  image, title, author, year, phone-number, price, description and nct                 | Pass      |
 | Update Car button           | Click               | Opens Update Car Form                                                                                                | Pass      |
 | Update Car button           | Display             | Button only visible if user is the author                                                                               | Pass      |
-| Delete Car button           | Click     |          Modal Car                         
-                                                            | Pass      |
+| Delete Car button           | Click     |          Modal Card                         | Pass      |
 | Delete Car button           | Display             | Button only visible if user is the author                                                                               | Pass      |
 | User Comments                  | Display             | Displays correct name date time and comment body                                                                        | Pass      |                                                                                
 | Delete comment button          | Display             | Button only visible if user is the comment author                                                                       | Pass      |
@@ -222,21 +226,21 @@ Manual Testing was done to see if everything worked:
 ### No Slug in Add
 <h2 class="center"><img src="static/images/test/slug-error.png"></h2>
 
-I was having trouble clicking into an Ad posted. The issue was the ad didnt have a slug so the bottom image was added with the help of a tutor. 
+- I was having trouble clicking into an Ad posted. The issue was the ad didnt have a slug so the bottom image was added with the help of a tutor. 
 <h2 class="center"><img src="static/images/test/error-fix.png"></h2>
 
 ## Issues not fixed.
 
 ### SendGrid Emails
 
- I tried to add a contact form that sends to admin email address via SendGrid but i ran into trouble.
+- I tried to add a contact form that sends to admin email address via SendGrid but i ran into trouble.
  <h2 class="center"><img src="static/images/test/stmp-error.png"></h2>
 
 - I was looking on Stackoverflow for answers and help. I tried i few ideas that were there but unfortunlately i ran out of time. At the end of these i will look into it deeper to find a solution. 
 
 <h2 class="center"><img src="static/images/test/error-sendgrid.png"></h2>
 
--   It could be possible they needed to validated me on the website which i tried but no reply and i unfortunlately ran out of time. 
+- It could be possible they needed to validated me on the website which i tried but no reply and i unfortunlately ran out of time. 
 
 ### Log in with social media. 
 
@@ -247,26 +251,28 @@ I could reach the third party website and when i clicked contintue it would come
 
 ## Reponsive Testing
 
--   The Website was tested on Google Chrome, Microsoft Edge and Safari browsers.
+- The Website was tested on Google Chrome, Microsoft Edge and Safari browsers.
 
--   The website was viewed on a variety of devices such as Desktop, Laptop and developer tools app which provides mock up phones with responsive.
+- The website was viewed on a variety of devices such as Desktop, Laptop and developer tools app which provides mock up phones with responsive.
 
 ## Lighthouse Rating
 
 ### Home Page
-<h2 class="center"><img src="static/images/test/homepage-lighthouse.png"></h2>
+<h2 class="center"><img src="static/images/readme-image/homepage-lighthouse.png"></h2>
 
+- Low score on images for the homepage i changed the ratio but it still wouldn't change. 
 ### Browse Page
-<h2 class="center"><img src="static/images/test/car-for-sale.png"></h2>
+<h2 class="center"><img src="static/images/readme-image/new-carlist-valid.png"></h2>
+ 
+ - I was scoring very low in Performance around the 25 mark constantly. I did what the issues said. I am currently in the south of Lebanon at the moment and my wifi connection is a nightmare. I dunno if these would effect the issue. 
 
 ### Car Detail Page
-<h2 class="center"><img src="static/images/test/.png"></h2>
+<h2 class="center"><img src="static/images/readme-image/car-joe-valid.png"></h2>
 
+- I got flagged for my modal having a h1 class for my model before the h3. I needed to do this to make the page more attractive. 
 ### Log In Page
-<h2 class="center"><img src="static/images/test/login-lighthouse.png"></h2>
+<h2 class="center"><img src="static/images/readme-image/login-lighthouse.png"></h2>
 
 ### Sign Up Page
-<h2 class="center"><img src="static/images/test/register-lighthouse.png"></h2>
+<h2 class="center"><img src="static/images/readme-image/register-lighthouse.png"></h2>
 
-### Log Out Page
-<h2 class="center"><img src="static/images/test/error-fix.png"></h2>
