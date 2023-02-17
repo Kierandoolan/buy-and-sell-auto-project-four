@@ -1,3 +1,6 @@
+# Testing Page
+
+
 ## WW3C Validator
 
 ### Errors in Contact Form and Edit Form
@@ -242,6 +245,28 @@ I could reach the third party website and when i clicked contintue it would come
 
 - I hope to also come back and fix this in a later stage. 
 
+## Reponsive Testing
 
+-   The Website was tested on Google Chrome, Microsoft Edge and Safari browsers.
 
+-   The website was viewed on a variety of devices such as Desktop, Laptop and developer tools app which provides mock up phones with responsive.
 
+## Lighthouse Rating
+
+### Home Page
+<h2 class="center"><img src="static/images/test/error-fix.png"></h2>
+
+### Browse Page
+<h2 class="center"><img src="static/images/test/error-fix.png"></h2>
+
+### Car Detail Page
+<h2 class="center"><img src="static/images/test/error-fix.png"></h2>
+
+### Log In Page
+<h2 class="center"><img src="static/images/test/error-fix.png"></h2>
+
+### Sign In Page
+<h2 class="center"><img src="static/images/test/error-fix.png"></h2>
+
+### Log Out Page
+<h2 class="center"><img src="static/images/test/error-fix.png"></h2>
